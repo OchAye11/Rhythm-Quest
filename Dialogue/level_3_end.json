@@ -1,0 +1,12 @@
+{
+	"00": {
+		"name": "Sour",
+		"text": "Quick now that Choc'lat is of balance. Strike now.",
+		"next": "end",
+		"emotion": "talking",
+	},
+	
+	"end": {
+		"trigger": "end"
+	}
+}

@@ -1,0 +1,247 @@
+[gd_scene load_steps=6 format=3 uid="uid://bvarf2b7sfhlc"]
+
+[ext_resource type="Script" uid="uid://c3crby78fsldi" path="res://Scripts/LevelSelect/MenuScene.gd" id="1_mdne7"]
+[ext_resource type="PackedScene" uid="uid://c0bchh4dqplp7" path="res://Animations/Fade_Transition.tscn" id="2_g6pvw"]
+[ext_resource type="Texture2D" uid="uid://g3igdabt8qph" path="res://Textures/MainMenu.png" id="2_mp53d"]
+[ext_resource type="Theme" uid="uid://dd7vnve77hcbm" path="res://Textures/Theme/Main_theme.tres" id="3_mp53d"]
+[ext_resource type="Texture2D" uid="uid://bmxypqldyl4pm" path="res://Textures/UI.png" id="4_h15vq"]
+
+[node name="MenuScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mdne7")
+audio_name = "Master"
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(645, 360)
+texture = ExtResource("2_mp53d")
+
+[node name="MenuButtons" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = 10.82
+offset_right = 20.0
+offset_bottom = 50.82
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Play" type="Button" parent="MenuButtons"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -127.0
+offset_top = -170.0
+offset_right = 173.0
+offset_bottom = -110.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_mp53d")
+theme_override_font_sizes/font_size = 38
+text = "Play
+"
+icon_alignment = 1
+
+[node name="Settings" type="Button" parent="MenuButtons"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -129.8
+offset_top = -57.675
+offset_right = 170.2
+offset_bottom = 2.325
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_mp53d")
+theme_override_font_sizes/font_size = 38
+text = "Settings
+"
+icon_alignment = 1
+
+[node name="Quit" type="Button" parent="MenuButtons"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -129.0
+offset_top = 57.0
+offset_right = 171.0
+offset_bottom = 117.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_mp53d")
+theme_override_font_sizes/font_size = 38
+text = "Quit"
+icon_alignment = 1
+
+[node name="Settings" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -516.0
+offset_top = -314.0
+offset_right = 564.0
+offset_bottom = 325.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScoreBackground" type="NinePatchRect" parent="Settings"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -231.0
+offset_top = -273.0
+offset_right = 231.0
+offset_bottom = 273.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_h15vq")
+region_rect = Rect2(384.218, 0, 128, 128)
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="ScoreBackground2" type="NinePatchRect" parent="Settings"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -212.5
+offset_top = -253.0
+offset_right = 212.5
+offset_bottom = 253.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_h15vq")
+region_rect = Rect2(0.0804024, 0, 128.038, 128)
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="SettingsLabel" type="Label" parent="Settings"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -235.5
+offset_right = 235.5
+offset_bottom = 168.0
+grow_horizontal = 2
+theme = ExtResource("3_mp53d")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 110
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Settings"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -93.725
+offset_right = 150.0
+offset_bottom = -33.725
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("3_mp53d")
+theme_override_font_sizes/font_size = 36
+text = "Back"
+
+[node name="Volume" type="Label" parent="Settings"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -318.0
+offset_top = -67.915
+offset_right = 78.0
+offset_bottom = -3.91498
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_mp53d")
+theme_override_font_sizes/font_size = 46
+text = "Volume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VolumeSlider" type="HSlider" parent="Settings"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -190.0
+offset_top = -22.5
+offset_right = 184.0
+offset_bottom = 22.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_mp53d")
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="Fade_Trans" parent="." instance=ExtResource("2_g6pvw")]
+visible = false
+layout_mode = 0
+
+[node name="FadeTimer" type="Timer" parent="Fade_Trans"]
+
+[node name="NameLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -359.0
+offset_top = 25.0
+offset_right = 359.0
+offset_bottom = 193.0
+grow_horizontal = 2
+theme = ExtResource("3_mp53d")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 110
+text = "Rhythm Quest"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="pressed" from="MenuButtons/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MenuButtons/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="MenuButtons/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Settings/Button" to="." method="_on_button_pressed"]
+[connection signal="value_changed" from="Settings/VolumeSlider" to="." method="_on_volume_slider_value_changed"]
+[connection signal="timeout" from="Fade_Trans/FadeTimer" to="." method="_on_fade_timer_timeout"]

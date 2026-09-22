@@ -1,0 +1,120 @@
+[gd_scene load_steps=11 format=3 uid="uid://ciqx3n5nnme4k"]
+
+[ext_resource type="Script" uid="uid://c52jaunqxqcpe" path="res://Scripts/test.gd" id="1_41s21"]
+[ext_resource type="PackedScene" uid="uid://dj7f8aak30i88" path="res://Objects/Game/arrows_icon.tscn" id="1_n7cfa"]
+[ext_resource type="Texture2D" uid="uid://bchj0fuuve5e4" path="res://Textures/Forest.png" id="2_fuh0l"]
+[ext_resource type="Texture2D" uid="uid://bnkvw4v880rjl" path="res://Textures/Tree.png" id="2_ynpan"]
+[ext_resource type="PackedScene" uid="uid://c8uvv8xg2iqrg" path="res://Objects/Audio/conductor.tscn" id="3_f8gr7"]
+[ext_resource type="Texture2D" uid="uid://hhw57faj33s4" path="res://Textures/Items.png" id="3_ynpan"]
+[ext_resource type="PackedScene" uid="uid://cphoyc0ohdme" path="res://Objects/Game/damage_negation_icon.tscn" id="4_xfdtu"]
+[ext_resource type="PackedScene" uid="uid://prxf2p3eq74j" path="res://Objects/LevelSelect/pause_menu.tscn" id="5_ah0qf"]
+[ext_resource type="PackedScene" uid="uid://osrcbqlysjig" path="res://Objects/Game/scoreboard.tscn" id="5_cfw56"]
+[ext_resource type="PackedScene" uid="uid://dytpi2jk4eaeo" path="res://Objects/dialogue_player.tscn" id="6_qhip6"]
+
+[node name="Test" type="Node2D"]
+script = ExtResource("1_41s21")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(640, 360)
+texture = ExtResource("2_fuh0l")
+
+[node name="TreeBranch" type="Sprite2D" parent="."]
+position = Vector2(626, 350)
+scale = Vector2(1, 0.5)
+texture = ExtResource("2_ynpan")
+hframes = 2
+
+[node name="TreeLeaves" type="Sprite2D" parent="."]
+position = Vector2(638, 155)
+rotation = 4.71239
+scale = Vector2(0.630682, 0.618963)
+texture = ExtResource("2_ynpan")
+hframes = 2
+frame = 1
+
+[node name="EnemyDamage" type="Sprite2D" parent="."]
+position = Vector2(805, 290)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_ynpan")
+hframes = 5
+vframes = 2
+frame = 3
+
+[node name="ArrowLeft" parent="." instance=ExtResource("1_n7cfa")]
+position = Vector2(321.8, 610)
+frame = 5
+button_input = "Left"
+base_frame = 5
+pressed_frame = 7
+
+[node name="ArrowUp" parent="." instance=ExtResource("1_n7cfa")]
+position = Vector2(505.8, 610)
+frame = 4
+button_input = "Up"
+base_frame = 4
+pressed_frame = 6
+
+[node name="ArrowDown" parent="." instance=ExtResource("1_n7cfa")]
+position = Vector2(707.9, 610)
+scale = Vector2(0.300391, 0.300391)
+frame = 1
+button_input = "Down"
+base_frame = 1
+pressed_frame = 3
+
+[node name="ArrowRight" parent="." instance=ExtResource("1_n7cfa")]
+position = Vector2(923.8, 610)
+button_input = "Right"
+
+[node name="Conductor" parent="." instance=ExtResource("3_f8gr7")]
+
+[node name="Range_Negation_Icon" parent="." instance=ExtResource("4_xfdtu")]
+position = Vector2(1195, 86)
+frame = 1
+negation_type = "Range"
+
+[node name="Mellee_Negation_Icon" parent="." instance=ExtResource("4_xfdtu")]
+position = Vector2(1197, 242)
+frame = 2
+negation_type = "Mellee"
+
+[node name="LabelHolder" type="Node2D" parent="."]
+position = Vector2(81, 67)
+
+[node name="Score" type="Label" parent="LabelHolder"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+offset_right = 56.0
+grow_vertical = 0
+text = "Score: "
+
+[node name="Combo" type="Label" parent="LabelHolder"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Scoreboard" parent="." instance=ExtResource("5_cfw56")]
+visible = false
+
+[node name="DialoguePlayer" parent="." instance=ExtResource("6_qhip6")]
+offset = Vector2(0, 49.955)
+transform = Transform2D(1, 0, 0, 1, 0, 49.955)
+
+[node name="PauseMenu" parent="." instance=ExtResource("5_ah0qf")]
+visible = false
+
+[node name="EndTimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="DialogueTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="beat" from="Conductor" to="." method="_on_conductor_beat"]
+[connection signal="measured" from="Conductor" to="." method="_on_conductor_measured"]
+[connection signal="negation_pressed" from="Range_Negation_Icon" to="." method="_on_range_negation_icon_negation_pressed"]
+[connection signal="negation_pressed" from="Mellee_Negation_Icon" to="." method="_on_mellee_negation_icon_negation_pressed"]
+[connection signal="timeout" from="EndTimer" to="." method="_on_end_timer_timeout"]
+[connection signal="timeout" from="DialogueTimer" to="." method="_on_dialogue_timer_timeout"]

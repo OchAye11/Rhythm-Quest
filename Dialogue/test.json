@@ -1,0 +1,45 @@
+{
+	"00": {
+		"name": "Narrator",
+		"text": "The narrator is now speaking and the json file works as intended",
+		"next": "01"
+	},
+
+	"01": {
+		"name": "Narrator",
+		"text": "The narrator is now finished speaking and the json file works as intended",
+		"next": "02"
+	},
+
+	"02": {
+		"name": "Player",
+		"text": "The Player is now speaking with a condition",
+		"next": "05",
+		"condition": "test_var",
+		"condition_failed": "03"
+	},
+
+	"03": {
+		"name": "Sweat",
+		"text": "The Player is now speaking without a condition",
+		"next": "04",
+		"emotion": "angry"
+	},
+
+	"04": {
+		"name": "Sour",
+		"text": "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
+		"next": "end",
+		"emotion": "happy"
+	},
+
+	"05": {
+		"name": "Player",
+		"text": "The dialogue has skipped to this line because of  the condition",
+		"next": "end"
+	},
+
+	"end": {
+		"trigger": "end"
+	}
+}

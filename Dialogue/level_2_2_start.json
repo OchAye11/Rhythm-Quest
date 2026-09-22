@@ -1,0 +1,75 @@
+{
+	"00": {
+		"name": "Sour",
+		"text": "Seriously, your choosing to go right. Lame.",
+		"next": "01",
+		"emotion": "angry",
+	},
+
+	"01": {
+		"name": "Sweat",
+		"text": "Thank you for choosing correctly mortal, and not being persuaded by those of a lesser intelect.",
+		"next": "02",
+		"emotion": "happy",
+	},
+
+	"02": {
+		"name": "Sour",
+		"text": "What did you call me?",
+		"next": "03",
+		"emotion": "angry",
+	},
+
+	"03": {
+		"name": "Sweat",
+		"text": "I never said your name. It was you that presumed I was talking about you.",
+		"next": "04",
+		"emotion": "talking",
+	},
+
+	"04": {
+		"name": "Sour",
+		"text": "Grrrr.",
+		"next": "05",
+		"emotion": "angry",
+	},
+	
+	"05": {
+		"name": "Sweat",
+		"text": "Nevermind Sour. Let's keep going lord Pasta can't be hept waiting.",
+		"next": "06",
+		"emotion": "talking",
+	},
+	
+	"06": {
+		"name": "Narrator",
+		"text": "After walking for a while you round a bend only to find a fallen tree blocking the trail.",
+		"next": "07",
+		"emotion": "talking",
+	},
+	
+	"07": {
+		"name": "Sour",
+		"text": "Ha, see. I told you we shouldn't have come this way but nooo we all have to listen to Sweat.",
+		"next": "08",
+		"emotion": "happy",
+	},
+	
+	"08": {
+		"name": "Sweat",
+		"text": "How was I supposed to know that a tree was blocking the way.",
+		"next": "09",
+		"emotion": "angry",
+	},
+	
+	"09": {
+		"name": "Sweat",
+		"text": "Mortal put that axe to good use and clear the tree from the path.",
+		"next": "end",
+		"emotion": "talking",
+	},
+
+	"end": {
+		"trigger": "end"
+	}
+}

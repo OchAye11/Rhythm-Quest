@@ -1,0 +1,12 @@
+{
+	"00": {
+		"name": "Sour",
+		"text": "Good ridance. Lord Pasta will be thrilled to know we retired his oldest enemy.",
+		"next": "end",
+		"emotion": "happy",
+	},
+
+	"end": {
+		"trigger": "end"
+	}
+}

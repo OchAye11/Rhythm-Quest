@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://doh5ejt2hme7a"]
+
+[ext_resource type="Texture2D" uid="uid://dx5hyehj75qdf" path="res://Textures/ArrowButtons.png" id="1_7na3x"]
+[ext_resource type="Script" uid="uid://7ewcd4gp5udt" path="res://Scripts/Game/next_arrow.gd" id="2_2rwo0"]
+
+[node name="NextArrow" type="Sprite2D"]
+rotation = 1.5708
+scale = Vector2(0.4, 0.5)
+texture = ExtResource("1_7na3x")
+hframes = 3
+script = ExtResource("2_2rwo0")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(-120, -12, -92.5, 6, -62.5, -2, -60, 90, 55, 90, 57.5, -4, 90, 6, 117.5, -12, -4.91753e-06, -90)
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

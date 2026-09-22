@@ -1,0 +1,86 @@
+[gd_scene load_steps=5 format=3 uid="uid://dytpi2jk4eaeo"]
+
+[ext_resource type="Script" uid="uid://dvp0h60vdh84o" path="res://Scripts/dialogue_player.gd" id="1_k164p"]
+[ext_resource type="Texture2D" uid="uid://l7o76ep187sw" path="res://Textures/Dialogue_Box.png" id="1_uwbty"]
+[ext_resource type="Texture2D" uid="uid://bgysijdr8mddv" path="res://Textures/Characters.png" id="2_snte7"]
+[ext_resource type="Theme" uid="uid://dd7vnve77hcbm" path="res://Textures/Theme/Main_theme.tres" id="4_v101p"]
+
+[node name="DialoguePlayer" type="CanvasLayer"]
+process_mode = 2
+script = ExtResource("1_k164p")
+dialogue_file = "res://Dialogue/test.json"
+
+[node name="CharacterHolder" type="Node2D" parent="."]
+
+[node name="Sour" type="Sprite2D" parent="CharacterHolder"]
+position = Vector2(-297, 295)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_snte7")
+hframes = 6
+vframes = 2
+frame = 6
+
+[node name="Sweat" type="Sprite2D" parent="CharacterHolder"]
+position = Vector2(1567, 324)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_snte7")
+hframes = 6
+vframes = 2
+
+[node name="NameBox" type="NinePatchRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -595.0
+offset_top = 55.0
+offset_right = -430.0
+offset_bottom = 94.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_uwbty")
+patch_margin_top = 4
+patch_margin_bottom = 4
+
+[node name="Name" type="RichTextLabel" parent="NameBox"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 5.0
+offset_right = 159.0
+offset_bottom = 34.0
+theme = ExtResource("4_v101p")
+text = "Name"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextBox" type="NinePatchRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -596.0
+offset_top = 101.0
+offset_right = 604.0
+offset_bottom = 297.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_uwbty")
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="Text" type="RichTextLabel" parent="TextBox"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 15.0
+offset_right = 1181.0
+offset_bottom = 184.0
+theme = ExtResource("4_v101p")
+text = "This is were the text for the game will go"
+scroll_active = false
+
+[connection signal="ready" from="." to="." method="_on_ready"]

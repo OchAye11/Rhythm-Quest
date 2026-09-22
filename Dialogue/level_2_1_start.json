@@ -1,0 +1,40 @@
+{
+	"00": {
+		"name": "Sweat",
+		"text": "I can't believe you decided to go left. And here I thought you were smart.",
+		"next": "01",
+		"emotion": "angry",
+	},
+
+	"01": {
+		"name": "Sour",
+		"text": "The lumberer may not be smart but anyone who agrees with me is automatically cool.",
+		"next": "02",
+		"emotion": "happy",
+	},
+
+	"02": {
+		"name": "Sweat",
+		"text": "Being cool doesn't matter when your lost.",
+		"next": "03",
+		"emotion": "talking",
+	},
+
+	"03": {
+		"name": "Sour",
+		"text": "We're not lost.",
+		"next": "04",
+		"emotion": "talking",
+	},
+
+	"04": {
+		"name": "Narrator",
+		"text": "The group was now lost. Use the 'wsd' or 'Up', 'Down' and 'Right' arrow keys in time with the beat to find your way out of the forest.",
+		"next": "end",
+		"emotion": "talking",
+	},
+
+	"end": {
+		"trigger": "end"
+	}
+}

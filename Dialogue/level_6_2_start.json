@@ -1,0 +1,299 @@
+{
+	"00": {
+		"name": "Sweat",
+		"text": "Are you always going to go with Sour no matter what. No matter how many times we get lost or have to get into a fight.",
+		"next": "sour_reply_0",
+		"emotion": "angry",
+		"condition": {
+			"been_lost_1": "1",
+			"killed_tree": "2",
+			"been_lost_2": "3",
+			"fight_5": "4",
+			},
+		"condition_failed": "sweat_choices_0"
+	},
+	
+	"sweat_choices_0": {
+		"name": "Sweat",
+		"text": "Seems like someone has a favourite. Even if that favourite always gets us lost.",
+		"next": "sour_reply_0",
+		"emotion": "angry",
+		"condition": {
+			"been_lost_1": "1",
+			"killed_tree": "2",
+			"been_lost_2": "3",
+			},
+		"condition_failed": "sweat_choices_1"
+	},
+	
+	"sweat_choices_1": {
+		"name": "Sweat",
+		"text": "Seems like someone has a favourite. Even if they get you into fights.",
+		"next": "sour_reply_0",
+		"emotion": "angry",
+		"condition": {
+			"been_lost_1": "1",
+			"killed_tree": "2",
+			"fight_5": "4",
+			},
+		"condition_failed": "sweat_choices_2"
+	},
+	
+	"sweat_choices_2": {
+		"name": "Sweat",
+		"text": "Seems like someone has a favourite. Even if that favourite always gets us lost.",
+		"next": "sour_reply_0",
+		"emotion": "angry",
+		"condition": {
+			"been_lost_1": "1",
+			"fight_5": "4",
+			"been_lost_2": "3",
+			},
+		"condition_failed": "sweat_choices_3"
+	},
+	
+		"sweat_choices_3": {
+		"name": "Sweat",
+		"text": "Seems like someone has a favourite. Even if they get you into fights.",
+		"next": "sour_reply_0",
+		"emotion": "angry",
+		"condition": {
+			"fight_5": "4",
+			"killed_tree": "2",
+			"been_lost_2": "3",
+			},
+		"condition_failed": "sweat_choices_4"
+	},
+	
+	"sweat_choices_4": {
+		"name": "Sweat",
+		"text": "That's alright. Just follow Sour even if they get you into fights.",
+		"next": "sour_reply_0",
+		"emotion": "angry",
+		"condition": {
+			"fight_5": "4",
+			"killed_tree": "2",
+			},
+		"condition_failed": "sweat_choices_5"
+	},
+	
+	"sweat_choices_5": {
+		"name": "Sweat",
+		"text": "That's alright. Let's just follow Sour again. It's not like they always get lost.",
+		"next": "sour_reply_0",
+		"emotion": "angry",
+		"condition": {
+			"been_lost_1": "1",
+			"been_lost_2": "3",
+			},
+		"condition_failed": "sweat_choices_6"
+	},
+	
+	"sweat_choices_6": {
+		"name": "Sweat",
+		"text": "Fine I guess we can follow Sour again.",
+		"next": "sour_reply_0",
+		"emotion": "angry",
+		"condition": {
+			"fight_5": "4",
+			"been_lost_1": "1",
+			},
+		"condition_failed": "sweat_choices_7"
+	},
+	
+	"sweat_choices_7": {
+		"name": "Sweat",
+		"text": "Fine I guess we can follow Sour again.",
+		"next": "sour_reply_0",
+		"emotion": "angry",
+		"condition": {
+			"killed_tree": "2",
+			"been_lost_2": "3",
+			},
+		"condition_failed": "sweat_choices_8"
+	},
+	
+		"sweat_choices_8": {
+		"name": "Sweat",
+		"text": "Fine I guess we can follow Sour again.",
+		"next": "sour_reply_0",
+		"emotion": "angry",
+		"condition": {
+			"fight_5": "4",
+			"been_lost_2": "3",
+			},
+		"condition_failed": "sweat_choices_9"
+	},
+	
+	"sweat_choices_9": {
+		"name": "Sweat",
+		"text": "Fine I guess we can follow Sour again.",
+		"next": "sour_reply_0",
+		"emotion": "angry",
+		"condition": {
+			"killed_tree": "2",
+			"been_lost_1": "1",
+			},
+		"condition_failed": "sweat_choices_10"
+	},
+	
+		"sweat_choices_10": {
+		"name": "Sweat",
+		"text": "We got lost once, let's hope it doesn't happen again.",
+		"next": "sour_reply_0",
+		"emotion": "angry",
+		"condition": "been_lost_1",
+		"condition_failed": "sweat_choices_11"
+	},
+	
+	"sweat_choices_11": {
+		"name": "Sweat",
+		"text": "We got lost once, let's hope it doesn't happen again.",
+		"next": "sour_reply_0",
+		"emotion": "angry",
+		"condition": "been_lost_2",
+		"condition_failed": "sweat_choices_12"
+	},
+	
+	"sweat_choices_12": {
+		"name": "Sweat",
+		"text": "Fine I guess we can follow Sour this time. I don't like it though and I'm only following you because the mortal decided.",
+		"next": "sour_reply_0",
+		"emotion": "angry",
+	},
+	
+	"sour_reply_0": {
+		"name": "Sour",
+		"text": "Ha ha. I knew I liked you lumberer from the moment we first met. And don't listen to Sweaty cause we're never getting lost again.",
+		"next": "lost_twice_0",
+		"emotion": "happy",
+		"condition": {
+			"been_lost_1": "1",
+			"killed_tree": "2",
+			"been_lost_2": "3",
+			"fight_5": "4",
+			},
+		"condition_failed": "sour_reply_1"
+	},
+	
+	"sour_reply_1": {
+		"name": "Sour",
+		"text": "Thanks for placing your trust in me again Lumberer. Third times the charm and I won't get us lost again.",
+		"next": "lost_twice_0",
+		"emotion": "happy",
+		"condition": {
+			"been_lost_1": "1",
+			"been_lost_2": "3",
+			},
+		"condition_failed": "sour_reply_2"
+	},
+	
+	"sour_reply_2": {
+		"name": "Sour",
+		"text": "Thanks for picking me lumberer I knew we bonded after being in all those fights.",
+		"next": "lost_twice_0",
+		"emotion": "happy",
+		"condition": {
+			"killed_tree": "2",
+			"fight_5": "4",
+			},
+		"condition_failed": "sour_reply_3"
+	},
+	
+	"sour_reply_3": {
+		"name": "Sour",
+		"text": "Always knew you'd pick me. Let's get moving.",
+		"next": "lost_twice_0",
+		"emotion": "happy",
+	},
+	
+	"lost_twice_0": {
+		"name": "Sweat",
+		"text": "I doubt it. Sour you are definitely going to get us lost again.",
+		"next": "lost_twice_1",
+		"emotion": "talking",
+		"condition": {
+			"been_lost_2": "3",
+			"been_lost_1": "1",
+			},
+		"condition_failed": "lost_once_0"
+	},
+	
+	"lost_twice_1": {
+		"name": "Sour",
+		"text": "No I'm not. We're in lord Pasta's domain now, that's home turf. There's no way I'm getting the group lost again. Have some faith.",
+		"next": "lost_twice_2",
+		"emotion": "talking",
+	},
+	
+	"lost_twice_2": {
+		"name": "Narrator",
+		"text": "The group immediately got lost following Sour.",
+		"next": "end",
+		"emotion": "talking",
+	},
+	
+	"lost_once_0": {
+		"name": "Sweat",
+		"text": "You better not get us lost again.",
+		"next": "lost_once_2",
+		"emotion": "talking",
+		"condition": "been_lost_2",
+		"condition_failed": "lost_once_1"
+	},
+	
+	"lost_once_1": {
+		"name": "Sweat",
+		"text": "You better not get us lost again.",
+		"next": "lost_once_2",
+		"emotion": "talking",
+		"condition": "been_lost_1",
+		"condition_failed": "never_lost_0"
+	},
+	
+	"lost_once_2": {
+		"name": "Sour",
+		"text": "Last time was just a bit of bad luck. Trust me, there is no way we're going to get lost again we're in lord Pasta's domain that's home turf and I know this place like the back of my hand.",
+		"next": "lost_once_3",
+		"emotion": "talking",
+	},
+	
+	"lost_once_3": {
+		"name": "Sweat",
+		"text": "You don't have any hands.",
+		"next": "lost_once_4",
+		"emotion": "talking",
+	},
+	
+	"lost_once_4": {
+		"name": "Sour",
+		"text": "Bad analogy. But the point is, we're not getting lost on my watch.",
+		"next": "lost_once_5",
+		"emotion": "talking",
+	},
+	
+	"lost_once_5": {
+		"name": "Narrator",
+		"text": "The group got lost on Sour's watch.",
+		"next": "end",
+		"emotion": "talking",
+	},
+	
+	"never_lost_0": {
+		"name": "Narrator",
+		"text": "As the group walks alnog the trail you notice you seemed to have circled back and gotten lost.",
+		"next": "never_lost_1",
+		"emotion": "talking",
+	},
+	
+	"never_lost_1": {
+		"name": "Narrator",
+		"text": "Use the 'wsd' or 'Up', 'Down' and 'Right' arrow keys in time with the beat to find your way back onto the right path.",
+		"next": "end",
+		"emotion": "talking",
+	},
+	
+	"end": {
+		"trigger": "end"
+	}
+}

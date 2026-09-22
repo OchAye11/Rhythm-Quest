@@ -1,0 +1,237 @@
+{
+	"00": {
+		"name": "Narrator",
+		"text": "As you get to the end of the forest a lone tree stands in the middle of thr trail blocking your path.",
+		"next": "01_1"
+	},
+
+	"01_1": {
+		"name": "Sweat",
+		"text": "Oh great. Another tree. Mortal you know what to do.",
+		"next": "01_2",
+		"emotion": "talking",
+		"condition": "tree_cut_1",
+		"condition_failed": "04"
+	},
+	
+	"01_2": {
+		"name": "Lumberjack",
+		"text": "Really another one.",
+		"next": "04",
+		"emotion": "talking",
+	},
+
+	"02": {
+		"name": "Sour",
+		"text": "A tree?",
+		"next": "03",
+		"emotion": "confused",
+	},
+
+	"03": {
+		"name": "Sweat",
+		"text": "Of course. Why are you confused we're in a forest, were else are you going to find a tree.",
+		"next": "04",
+		"emotion": "talking",
+	},
+
+	"04": {
+		"name": "Sour",
+		"text": "Why is the tree blocking the path.",
+		"next": "05",
+	},
+	
+	"05": {
+		"name": "??????",
+		"text": "That is because I am no ordinary tree.",
+		"next": "06",
+		"emotion": "talking",
+	},
+	
+	"06": {
+		"name": "Lumberjack",
+		"text": "Did... did that tree just talk.",
+		"next": "07",
+	},
+	
+	"07": {
+		"name": "Sour",
+		"text": "I think it did.",
+		"next": "08",
+		"emotion": "talking",
+	},
+	
+	"08": {
+		"name": "Choc'lat",
+		"text": "My name is Choc'lat. I am the gaurdian spirit of this forest. When the forest is in danger I branch out an arm to save it, I root for it's success and pine for it's attention. But today I am here for vengeance. Lumberjack, to long have you been allowed to swing your axe without a sap of remorse, to long have you been the root problem to all my frustrations. But no longer. Today you have barked up the wrong tree and now you will face justice.",
+		"next": "09",
+		"emotion": "talking",
+	},
+	
+	"09": {
+		"name": "Sweat",
+		"text": "That's a lot of puns.",
+		"next": "10",
+		"emotion": "talking",
+	},
+	
+	"10": {
+		"name": "Sour",
+		"text": "Yeah. Can we not do this. We're kind of on an important quest here, so if you could move aside that would be great.",
+		"next": "11",
+		"emotion": "talking",
+	},
+	
+	"11": {
+		"name": "Choc'lat",
+		"text": "Birch please. Do you know who your talking to. Do you know how long I've been waiting for this. Wooimabouttomakeanameformyselfhere.",
+		"next": "12",
+		"emotion": "talking",
+	},
+	
+	"12": {
+		"name": "Sour",
+		"text": "If it's a fight you want it's a fight you'll get. I've been waiting for something to spruce this quest up.",
+		"next": "13",
+		"emotion": "talking",
+	},
+	
+	"13": {
+		"name": "Sweat",
+		"text": "Not you to Sour. Look mister Choc'lat is there anyway you can let us pass without us having to fight you.",
+		"next": "14",
+		"emotion": "talking",
+	},
+	
+	"14": {
+		"name": "Choc'lat",
+		"text": "There is one way. The lumberjack must throw down his axe and vow to never pick up another one.",
+		"next": "15",
+		"emotion": "talking",
+	},
+	
+	"15": {
+		"name": "Sweat",
+		"text": "Is that it? Great, mortal throw down your axe and we'll be on our way.",
+		"next": "16",
+		"emotion": "talking",
+	},
+	
+	"16": {
+		"name": "Sour",
+		"text": "No way. Don't listen to that loser. Your axe is like an extension of your arm, you shouldn't have to give it up just cause some sappy willow told you to.",
+		"next": "17",
+		"emotion": "talking",
+	},
+	
+	"17": {
+		"name": "Sour",
+		"text": "I say we fight.",
+		"next": "18",
+		"emotion": "talking",
+	},
+	
+	"18": {
+		"name": "Sweat",
+		"text": "We don't have time for this. Don't be a meathead, just drop the axe.",
+		"next": "19",
+		"emotion": "talking",
+	},
+	
+	"19": {
+		"choices": {
+			"Fight!!!": "fight_0",
+			"Drop your axe": "drop_0"
+		}
+	},
+	
+	"fight_0": {
+		"name": "Lumberjack",
+		"text": "I wasn't planning on fighting but the thought grew on me.",
+		"next": "fight_1",
+		"emotion": "talking",
+		"change_condition": "killed_tree"
+	},
+	
+	"fight_1": {
+		"name": "Sour",
+		"text": "Oak-some.",
+		"next": "fight_2",
+		"emotion": "happy",
+	},
+	
+	"fight_2": {
+		"name": "Sweat",
+		"text": "I'm dealing with a bunch of children.",
+		"next": "fight_3",
+		"emotion": "angry",
+	},
+	
+	"fight_3": {
+		"name": "Sour",
+		"text": "Quick Choc'lat is about to attack get ready to defend yourself.",
+		"next": "fight_4",
+		"emotion": "talking",
+	},
+	
+	"fight_4": {
+		"name": "Sour",
+		"text": "Make sure to defend against the correct type of attack that Choc'lat sends out.",
+		"next": "fight_5",
+		"emotion": "talking",
+		"effect": "arrow_appear"
+	},
+	
+	"fight_5": {
+		"name": "Narrator",
+		"text": "Use the 'wasd' and arrow keys to block Choc'lats attacks. Click on the icons at the top right to switch your defensive style.",
+		"next": "end",
+		"emotion": "talking",
+		"effect": "arrow_disappear"
+	},
+	
+	"drop_0": {
+		"name": "Narrator",
+		"text": "The lumberjack releases the axe from their hands.",
+		"next": "drop_1",
+		"emotion": "talking",
+		"effect": "axe_appear",
+		"change_condition": "dropped_axe"
+	},
+	
+	"drop_1": {
+		"name": "Lumberjack",
+		"text": "Oh great Choc'lat, guardian of the forest I hereby vow to never pick up or swing another axe again.",
+		"next": "drop_2",
+		"emotion": "talking",
+	},
+	
+	"drop_2": {
+		"name": "Narrator",
+		"text": "A white light envelops the lumberjack.",
+		"next": "drop_3",
+		"effect": "light",
+	},
+	
+	"drop_3": {
+		"name": "Choc'lat",
+		"text": "A wise decision lumberjack. You may pass.",
+		"next": "drop_4",
+	},
+	
+	"drop_4": {
+		"name": "Narrator",
+		"text": "The tree blocking your path slowly moves out of your way.",
+		"next": "drop_5",
+	},
+	
+	"drop_5": {
+		"name": "Sour",
+		"text": "I thought you had a spine lumberer.",
+		"next": "end",
+	},
+
+	"end": {
+		"trigger": "end"
+	}
+}

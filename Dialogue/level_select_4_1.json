@@ -1,0 +1,126 @@
+{
+	"00": {
+		"name": "Sweat",
+		"text": "Lost again. How is it possible to get lost twice.",
+		"next": "lost_again_0",
+		"emotion": "angry",
+		"condition": "been_lost_1",
+		"condition_failed": "01"
+	},
+	
+	"lost_again_0": {
+		"name": "Sour",
+		"text": "It's easier than you think.",
+		"next": "lost_again_1",
+		"emotion": "talking",
+	},
+	
+	"lost_again_1": {
+		"name": "Sweat",
+		"text": "It shoudn't be.",
+		"next": "lost_again_2",
+		"emotion": "talking",
+	},
+	
+	"lost_again_2": {
+		"name": "Sour",
+		"text": "I don't know why your complaining. This is suppost to be an adventure. You have to learn to go with the flow and enjoy yourself.",
+		"next": "lost_again_3",
+		"emotion": "talking",
+	},
+	
+	"lost_again_3": {
+		"name": "Sweat",
+		"text": "I'm complaining because as we speak lord Pasta is sitting on his throne waiting for us to deliver the relic.",
+		"next": "lost_again_4",
+		"emotion": "talking",
+	},
+	
+	"lost_again_4": {
+		"name": "Sour",
+		"text": "So what we'll just walk a bit faster to make up for the time lost.",
+		"next": "lost_again_5",
+		"emotion": "talking",
+	},
+	
+	"lost_again_5": {
+		"name": "Sweat",
+		"text": "Sometimes I hate working with you.",
+		"next": "lost_again_6",
+		"emotion": "talking",
+	},
+	
+	"lost_again_6": {
+		"name": "Narrator",
+		"text": "You continue to walk along the trail as the mountains of Penne come into sight.",
+		"next": "end",
+		"emotion": "talking",
+	},
+
+	"01": {
+		"name": "Lumberjack",
+		"text": "Finally we found the trail.",
+		"next": "02",
+		"emotion": "talking",
+	},
+
+	"02": {
+		"name": "Sweat",
+		"text": "This is why we shoudn't follow Sour. Sour always gets lost.",
+		"next": "03",
+		"emotion": "talking",
+	},
+
+	"03": {
+		"name": "Sour",
+		"text": "No I don't.",
+		"next": "04",
+		"emotion": "talking",
+	},
+
+	"04": {
+		"name": "Sweat",
+		"text": "You once got lost in your own bedroom and couldn't find the door.",
+		"next": "05",
+		"emotion": "talking",
+	},
+	
+	"05": {
+		"name": "Sour",
+		"text": "That was a long time ago. My sense of direction has gotten way better since then.",
+		"next": "06",
+		"emotion": "talking",
+	},
+	
+	"06": {
+		"name": "Sweat",
+		"text": "It happend last week.",
+		"next": "07",
+		"emotion": "talking",
+	},
+	
+	"07": {
+		"name": "Sour",
+		"text": "And like I said I've imrpoved since then.",
+		"next": "09",
+		"emotion": "talking",
+	},
+	
+	"09": {
+		"name": "Sweat",
+		"text": "If you say so.",
+		"next": "10",
+		"emotion": "talking",
+	},
+	
+	"10": {
+		"name": "Narrator",
+		"text": "You continue to walk along the trail as the mountains of Penne come into sight.",
+		"next": "end",
+		"emotion": "talking",
+	},
+	
+	"end": {
+		"trigger": "end"
+	}
+}

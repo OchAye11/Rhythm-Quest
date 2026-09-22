@@ -1,0 +1,235 @@
+{
+	"00": {
+		"name": "Sour",
+		"text": "Right agian!. Lame.",
+		"next": "right_before_0",
+		"emotion": "angry",
+		"condition": "tree_cut_1",
+		"condition_failed": "01"
+	},
+	
+	"right_before_0": {
+		"name": "Sweat",
+		"text": "I see I can always count on you mortal to make the right decision.",
+		"next": "right_before_1",
+		"emotion": "happy",
+	},
+	
+		"right_before_1": {
+		"name": "Lumberjack",
+		"text": "Your welcome.",
+		"next": "right_before_2",
+		"emotion": "talking",
+	},
+	
+		"right_before_2": {
+		"name": "Sour",
+		"text": "If your just going to agree with whatever Sweaty says whats the point of me being here. Am I here just to watch you give up your livelyhood to some punk tree.",
+		"next": "right_before_4",
+		"emotion": "angry",
+		"condition": "dropped_axe",
+		"condition_failed": "lost_before_3"
+	},
+	
+		"right_before_3": {
+		"name": "Sour",
+		"text": "Bunch of losers.",
+		"next": "right_before_4",
+		"emotion": "talking",
+	},
+	
+		"right_before_4": {
+		"name": "Sweat",
+		"text": "No need to overreact. Let's just keep on going. Lord Pasta is sitting on his throne right now waiting for us.",
+		"next": "right_before_5",
+		"emotion": "talking",
+	},
+	
+		"right_before_5": {
+		"name": "Sour",
+		"text": "Lead the way then.",
+		"next": "04",
+		"emotion": "talking",
+	},
+
+	"01": {
+		"name": "Sweat",
+		"text": "Thanks for siding with me this time mortal. I knew you weren't such a dunderhead after all.",
+		"next": "02",
+		"emotion": "happy",
+	},
+
+	"02": {
+		"name": "Lumberjack",
+		"text": "Thanks. I guess.",
+		"next": "03",
+		"emotion": "talking",
+	},
+
+	"03": {
+		"name": "Sour",
+		"text": "Hmph. I'll let it slide this time since you went left last time but don't make it a habit lumberer",
+		"next": "04",
+		"emotion": "talking",
+	},
+	
+	"04": {
+		"name": "Narrator",
+		"text": "As the group makes their way along the trail they come up to a small river were the bridge has been destroyed.",
+		"next": "05",
+		"emotion": "talking",
+	},
+	
+	"05": {
+		"name": "Sweat",
+		"text": "Seriously!",
+		"next": "06",
+		"emotion": "angry",
+	},
+	
+	"06": {
+		"name": "Sour",
+		"text": "Ha ha ha. Sweaty you must be cursed or something. First the fallen tree now a broken bridge. This is why we should have went left.",
+		"next": "right_before_6",
+		"emotion": "happy",
+		"condition": "tree_cut_1",
+		"condition_failed": "07"
+	},
+	
+			"right_before_6": {
+		"name": "Sweat",
+		"text": "I hate this quest.",
+		"next": "08",
+		"emotion": "angry",
+	},
+	
+	"07": {
+		"name": "Sour",
+		"text": "Oh that's unlucky. What are the chances that the direction you picked would lead us to a broken bridge. What a shame.",
+		"next": "08",
+		"emotion": "talking",
+	},
+	
+	"08": {
+		"name": "Lumberjack",
+		"text": "I guess we'll just have to turn around and go the other way.",
+		"next": "09",
+		"emotion": "talking",
+	},
+	
+	"09": {
+		"name": "Sweat",
+		"text": "No.",
+		"next": "10",
+		"emotion": "talking",
+	},
+	
+	"10": {
+		"name": "Sour",
+		"text": "What do you mean no. Can't you see the broken bridge.",
+		"next": "11",
+		"emotion": "talking",
+	},
+	
+	"11": {
+		"name": "Sweat",
+		"text": "I do see it and we are going to fix it.",
+		"next": "12",
+		"emotion": "talking",
+	},
+	
+	"12": {
+		"name": "Sour",
+		"text": "How I don't even have any hands.",
+		"next": "13",
+		"emotion": "talking",
+	},
+	
+	"13": {
+		"name": "Sweat",
+		"text": "We'll use magic.",
+		"next": "14",
+		"emotion": "talking",
+	},
+	
+	"14": {
+		"name": "Sour",
+		"text": "Magic. But we're restriced on our use since we lost our magical licences cheating at musical chairs.",
+		"next": "15",
+		"emotion": "talking",
+	},
+	
+	"15": {
+		"name": "Sweat",
+		"text": "We might be restricted but the mortal isn't.",
+		"next": "16",
+		"emotion": "talking",
+	},
+	
+	"16": {
+		"name": "Sour",
+		"text": "But the lumberer can't use any magic.",
+		"next": "17",
+		"emotion": "talking",
+	},
+	
+	"17": {
+		"name": "Sweat",
+		"text": "That's why we're going to channel our magic through him.",
+		"next": "18",
+		"emotion": "talking",
+	},
+	
+	"18": {
+		"name": "Sour",
+		"text": "That's crazy. The lumberer will die.",
+		"next": "19",
+		"emotion": "talking",
+	},
+	
+	"19": {
+		"name": "Sweat",
+		"text": "That's a price I'm willing to pay.",
+		"next": "20",
+		"emotion": "talking",
+	},
+	
+	"20": {
+		"name": "Lumberjack",
+		"text": "I'm not.",
+		"next": "21",
+		"emotion": "talking",
+	},
+	
+	"21": {
+		"name": "Sweat",
+		"text": "Don't worry mortal just do what I say and you'll probably be fine.",
+		"next": "22",
+		"emotion": "talking",
+	},
+	
+	"22": {
+		"name": "Lumberjack",
+		"text": "I don't wanna do this.",
+		"next": "23",
+		"emotion": "talking",
+	},
+	
+		"23": {
+		"name": "Sweat",
+		"text": "To bad we're doing it.",
+		"next": "24",
+		"emotion": "talking",
+	},
+	
+		"24": {
+		"name": "Narrator",
+		"text": "Use the 'wasd' or arrow keys in time with the beat to channel the magic.",
+		"next": "end",
+		"emotion": "talking",
+	},
+	
+	"end": {
+		"trigger": "end"
+	}
+}

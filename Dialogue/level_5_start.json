@@ -1,0 +1,364 @@
+{
+	"00": {
+		"name": "Narrator",
+		"text": "As you get closer to the mountains of Penne you see a hooded figure standing on the trail in front of you.",
+		"next": "01"
+	},
+	
+	"01": {
+		"name": "Sour",
+		"text": "Who's this bozzo.",
+		"next": "02",
+		"emotion": "talking",
+	},
+	
+	"02": {
+		"name": "Sweat",
+		"text": "I suggest we remain cautious. Hooded figures blocking the road are normally a sign of danger.",
+		"next": "03",
+		"emotion": "talking",
+	},
+	
+	"03": {
+		"name": "Narrator",
+		"text": "You continue to walk forwards until the hooded figure stands before you.",
+		"next": "04",
+		"emotion": "talking",
+	},
+	
+	"04": {
+		"name": "Sour",
+		"text": "Move it buster, we're in a rush here.",
+		"next": "05",
+		"emotion": "talking",
+	},
+	
+	"05": {
+		"name": "??????",
+		"text": "I move for no one.",
+		"next": "06",
+		"emotion": "talking",
+	},
+	
+	"06": {
+		"name": "Narrator",
+		"text": "The figure in front of you throws off their clock.",
+		"next": "07",
+	},
+	
+	"07": {
+		"name": "Lord Burger",
+		"text": "It is I. Lord Burger. Ruler of all patties and buns.",
+		"next": "08",
+		"effect": "enemy_appear"
+	},
+	
+	"08": {
+		"name": "Sweat",
+		"text": "Lord Burger the arch enemy of lord Pasta.",
+		"next": "09",
+		"emotion": "angry",
+	},
+	
+	"09": {
+		"name": "Lord Burger",
+		"text": "Bahh. Don't even mention that impastar in the same sentence as me. Lord Pasta will rue the day he stole my secret patty recipe and opened a burger restaurant opposite mine.",
+		"next": "10",
+		"emotion": "talking",
+	},
+	
+	"10": {
+		"name": "Lord Burger",
+		"text": "Now I'm here to steal his precious relic and leave a dark stain on his life forever, mwha hah hah hah ha. Now hand over the relic mortal.",
+		"next": "11"
+	},
+	
+	"11": {
+		"name": "Sour",
+		"text": "Over their dead body. Don't worry lumberer we can take them.",
+		"next": "12",
+		"emotion": "talking",
+	},
+	
+	"12": {
+		"name": "Sweat",
+		"text": "Not so fast. I have an idea. Lord Burger, everyone knows that your fond of games, so why not play one instead of fighting. If we win you let us pass and if you win, well we'll probably just fight you anyway.",
+		"next": "13",
+		"emotion": "talking",
+	},
+	
+	"13": {
+		"name": "Lord Burger",
+		"text": "That has got to be the stupidest terms I've ever heard. Why would I agree to that.",
+		"next": "14",
+		"emotion": "talking",
+	},
+	
+	"14": {
+		"name": "Sweat",
+		"text": "Sounds like someones a chicken. Bawk bawk.",
+		"next": "15",
+		"emotion": "talking",
+	},
+	
+	"15": {
+		"name": "Lord Burger",
+		"text": "Fine we'll play a game. I get to ask any three questions, but you have to get all three right to pass.",
+		"next": "16",
+		"emotion": "talking",
+	},
+	
+		"16": {
+		"name": "Sweat",
+		"text": "Deal.",
+		"next": "17",
+		"emotion": "talking",
+	},
+	
+		"17": {
+		"name": "Sour",
+		"text": "What are you doing?",
+		"next": "18",
+		"emotion": "talking",
+	},
+	
+		"18": {
+		"name": "Sweat",
+		"text": "I'm negotiating so we don't have to fight.",
+		"next": "19",
+		"emotion": "talking",
+	},
+	
+		"19": {
+		"name": "Sour",
+		"text": "Your negotiating skills are terrible. Lord Burger gets to ask us any question, any, we don't know what their going to ask us and if we get one wrong we just fight anyway. Lets skip the formalities and just go straight to kicking his buns.",
+		"next": "20",
+		"emotion": "talking",
+	},
+	
+		"20": {
+		"name": "Sweat",
+		"text": "Are you serious? We still have a chance to get out of this without fighting. I say we take it no matter if the odds are against us.",
+		"next": "21",
+		"emotion": "talking",
+	},
+	
+		"21": {
+		"name": "Sour",
+		"text": "We didn't fight the tree and the lumberer lost their axe. But this is lord Pastas archenemy and we have a chance to deal with them once and for all. Let's fight.",
+		"next": "23",
+		"emotion": "talking",
+		"condition": "dropped_axe",
+		"condition_failed": "22"
+	},
+	
+		"22": {
+		"name": "Sweat",
+		"text": "We fought the tree and won but that doesn't meen we can win again. Let's take the safer option and try to beat the odds.",
+		"next": "24",
+		"emotion": "talking",
+		"condition": "killed_tree",
+		"condition_failed": "24"
+	},
+	
+		"23": {
+		"name": "Sweat",
+		"text": "Mortal you decide.",
+		"next": "choice",
+		"emotion": "talking",
+	},
+	
+	"24": {
+		"name": "Sour",
+		"text": "Lumberer it's up to you.",
+		"next": "choice",
+		"emotion": "talking",
+	},
+	
+	"choice": {
+		"choices": {
+			"Fight!!!": "fight_0",
+			"Play the game": "play_0"
+		}
+	},
+	
+	"fight_0": {
+		"name": "Sour",
+		"text": "Ha ha. Let's dance.",
+		"next": "fight_1",
+		"emotion": "happy",
+		"change_condition": "fight_5"
+	},
+	
+	"fight_1": {
+		"name": "Sweat",
+		"text": "Careful mortal. Lord Burger knows how to use magic, make sure you block againts it.",
+		"next": "end",
+		"emotion": "talking",
+	},
+	
+	"play_0": {
+		"name": "Lumberjack",
+		"text": "Let's play your game. Ask your questions.",
+		"next": "play_1",
+		"emotion": "talking",
+		"change_condition": "riddle_5"
+	},
+	
+		"play_1": {
+		"name": "Lord Burger",
+		"text": "So be it. First question what is my favourite colour?",
+		"next": "play_2",
+		"emotion": "talking",
+	},
+	
+		"play_2": {
+		"name": "Sour",
+		"text": "What. How are we supposed to know that.",
+		"next": "play_3",
+		"emotion": "talking",
+	},
+	
+		"play_3": {
+		"name": "Lord Burger",
+		"text": "You said I got to ask any question, so I say again what is my favourite colour?",
+		"next": "question_1",
+		"emotion": "talking",
+	},
+	
+	"question_1": {
+		"choices": {
+			"Red": "wrong",
+			"Blue": "play_4",
+			"Green": "wrong"
+		}
+	},
+	
+		"play_4": {
+		"name": "Lord Burger",
+		"text": "Grrr. Correct. Lucky guess",
+		"next": "play_5",
+		"emotion": "talking",
+	},
+	
+		"play_5": {
+		"name": "Sweat",
+		"text": "Ha ha. Two more to go.",
+		"next": "play_6",
+		"emotion": "talking",
+	},
+	
+		"play_6": {
+		"name": "Lord Burger",
+		"text": "Don't get to cocky just yet. Next question.",
+		"next": "play_7",
+		"emotion": "talking",
+	},
+	
+		"play_7": {
+		"name": "Lord Burger",
+		"text": "What is the name of the forest spirit guardian?",
+		"next": "question_2",
+		"emotion": "talking",
+	},
+	
+	"question_2": {
+		"choices": {
+			"Ca'ke": "wrong",
+			"Can'dy": "wrong",
+			"Choc'lat": "play_8"
+		}
+	},
+	
+		"play_8": {
+		"name": "Lord Burger",
+		"text": "How could you possibly know that?",
+		"next": "play_9",
+		"emotion": "talking",
+	},
+	
+		"play_9": {
+		"name": "Sour",
+		"text": "Let's just say that the spirit guardian was all bark and no bite.",
+		"next": "play_11",
+		"emotion": "happy",
+		"condition": "killed_tree",
+		"condition_failed": "play_10"
+	},
+	
+		"play_10": {
+		"name": "Sweat",
+		"text": "We've met before.",
+		"next": "play_11",
+		"emotion": "talking",
+	},
+	
+	"play_11": {
+		"name": "Lord Burger",
+		"text": "Unbelievable. Final question.",
+		"next": "play_12",
+		"emotion": "talking",
+	},
+	
+	"play_12": {
+		"name": "Lord Burger",
+		"text": "What kind of seed can be found on most burger buns?",
+		"next": "question_3",
+		"emotion": "talking",
+	},
+	
+		"question_3": {
+		"choices": {
+			"Sunflower": "wrong",
+			"Sesame": "play_13",
+			"Chia": "wrong"
+		}
+	},
+	
+	"play_13": {
+		"name": "Lord Burger",
+		"text": "Argh. Correct.",
+		"next": "play_14",
+		"emotion": "talking",
+	},
+	
+	"play_14": {
+		"name": "Sweat",
+		"text": "Ha ha. We win, you lose. Time to let us pass.",
+		"next": "play_15",
+		"emotion": "happy",
+	},
+	
+	"play_15": {
+		"name": "Lord Burger",
+		"text": "Fine but tell your lord that he hasn't seen the last of me. I will continue to smudge and splatter his name till the day I die.",
+		"next": "play_16",
+		"emotion": "talking",
+	},
+	
+	"play_16": {
+		"name": "Sour",
+		"text": "Sure. Whatever. Just let us pass.",
+		"next": "play_17",
+		"emotion": "talking",
+	},
+	
+		"play_17": {
+		"name": "Narrator",
+		"text": "Lord Burger steps aside and allows your group to pass.",
+		"next": "end",
+		"emotion": "talking",
+	},
+	
+	"wrong": {
+		"name": "Lord Burger",
+		"text": "Incorrect. Now it's time to die.",
+		"next": "end",
+		"emotion": "talking",
+		"effect": "lost_riddle"
+	},
+
+	"end": {
+		"trigger": "end"
+	}
+}

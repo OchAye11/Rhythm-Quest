@@ -1,0 +1,39 @@
+{
+	"00": {
+		"name": "Narrator",
+		"text": "After chanelling Seat and Sour's magic you were able to rebuild the bridge.",
+		"next": "01",
+	},
+
+	"01": {
+		"name": "Lumberjack",
+		"text": "Let's never do that again.",
+		"next": "02",
+		"emotion": "talking",
+	},
+
+	"02": {
+		"name": "Sour",
+		"text": "That was very impressive lumberer. I was certain your body was going to be ripped in half.",
+		"next": "03",
+		"emotion": "talking",
+	},
+
+	"03": {
+		"name": "Lumberjack",
+		"text": "What.",
+		"next": "04",
+		"emotion": "talking",
+	},
+
+	"04": {
+		"name": "Sweat",
+		"text": "Let's not dwell in the past, the bridge is built so it's time to get going again.",
+		"next": "end",
+		"emotion": "talking",
+	},
+	
+	"end": {
+		"trigger": "end"
+	}
+}

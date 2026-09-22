@@ -1,0 +1,176 @@
+{
+	"00": {
+		"name": "Lumberjack",
+		"text": "Phew. That tree was tuff but I got it done. Now time to go home and enjoy that pint.",
+		"next": "01"
+	},
+
+	"01": {
+		"name": "Narrator",
+		"text": "A bright light descends from the sky and envelopes the lumberjack.",
+		"next": "02",
+		"effect": "light",
+	},
+
+	"02": {
+		"name": "Lumberjack",
+		"text": "What the...",
+		"next": "03",
+	},
+
+	"03": {
+		"name": "??????",
+		"text": "Stand ready for our arrival lumberer.",
+		"next": "04",
+	},
+
+	"04": {
+		"name": "??????",
+		"text": "No need to be afraid, for you are in the presense of lord Pasta's greatest advisors.",
+		"next": "05",
+	},
+	
+	"05": {
+		"name": "Sweat",
+		"text": "My name is Sweat but my friends call me sweaty.",
+		"next": "06",
+		"emotion": "talking",
+	},
+	
+	"06": {
+		"name": "Sour",
+		"text": "And I'm Sour.",
+		"next": "07",
+		"emotion": "talking",
+	},
+	
+	"07": {
+		"name": "Sweat",
+		"text": "Today is your lucky day mortal for in lord Pasta's infinite wisdom he has bestowed upon you a quest.",
+		"next": "08",
+		"emotion": "talking",
+	},
+	
+		"08": {
+		"name": "Lumberjack",
+		"text": "A quest?",
+		"next": "09",
+		"emotion": "talking",
+	},
+	
+		"09": {
+		"name": "Sour",
+		"text": "That's right lumberer a quest of the utmost importance. One that if not completed will leave a dark stain upon lord Pasta.",
+		"next": "10",
+		"emotion": "talking",
+	},
+	
+		"10": {
+		"name": "Lumberjack",
+		"text": "I mean do I have to. I was planning on heading to the tavern to get a pint. Can't you find someone else to do it.",
+		"next": "11",
+		"emotion": "talking",
+	},
+	
+		"11": {
+		"name": "Sour",
+		"text": "Your name was specifically mentioned by lord Pasta lumberer. Your compliance is not mandatory, however, your presence is and force will be used as motivation.",
+		"next": "12",
+		"emotion": "talking",
+	},
+	
+		"12": {
+		"name": "Lumberjack",
+		"text": "I don't have a choice do I?",
+		"next": "13",
+		"emotion": "talking",
+	},
+	
+		"13": {
+		"name": "Sour",
+		"text": "No.",
+		"next": "14",
+		"emotion": "talking",
+	},
+	
+		"14": {
+		"name": "Sweat",
+		"text": "Wonderful. Now that you have decided to help us on this most noble quest mortal it is time to tell you how you will be of service.",
+		"next": "15",
+		"emotion": "talking",
+	},
+	
+		"15": {
+		"name": "Narrator",
+		"text": "A blinding light yet again envelopes the lumberjack but this time when the light fades the lumberjack is left holding a chest in both his arms.",
+		"next": "16",
+		"effect": "light",
+	},
+	
+		"16": {
+		"name": "Sweat",
+		"text": "Within this chest lies a powerful relic. It is your responsibility to travel north into the mountains of Penne, domain of lord Pasta and deliver it to him.",
+		"next": "17",
+		"emotion": "talking",
+	},
+	
+		"17": {
+		"name": "Lumberjack",
+		"text": "Is that it. Doesn't seem to hard.",
+		"next": "18",
+		"emotion": "talking",
+	},
+	
+		"18": {
+		"name": "Sweat",
+		"text": "But alas it is not. For lord Pasta has many jealous rivals.",
+		"next": "19",
+		"emotion": "talking",
+	},
+	
+		"19": {
+		"name": "Sour",
+		"text": "And crazy exes.",
+		"next": "20",
+		"emotion": "talking",
+	},
+	
+		"20": {
+		"name": "Sweat",
+		"text": "And they all seak to smear his name. By getting their hands on the relic.",
+		"next": "21",
+		"emotion": "talking",
+	},
+	
+			"21": {
+		"name": "Lumberjack",
+		"text": "So. All I have to do is take this chest, deliver it to lord Pasta and that's it.",
+		"next": "22",
+		"emotion": "talking",
+	},
+	
+			"22": {
+		"name": "Sour",
+		"text": "That is correct lumberer. But fret not for you will be acompanied by me and sweaty over there to help you in your journey.",
+		"next": "23",
+		"emotion": "talking",
+	},
+	
+		"23": {
+		"name": "Sweat",
+		"text": "And I have no dought that lord Pasta will greatly reward you for completing your quest.",
+		"next": "24",
+		"emotion": "talking",
+	},
+	
+		"24": {
+		"name": "Lumberjack",
+		"text": "Reward! You should have started with that. Let's hit the road.",
+		"next": "end",
+		"emotion": "talking",
+	},
+	
+	"end": {
+		"trigger": "end"
+	}
+}

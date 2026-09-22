@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cb0khn5vxai84"]
+
+[ext_resource type="Texture2D" uid="uid://buagdbocx0obr" path="res://Textures/LevelIcons.png" id="1_ydfqf"]
+[ext_resource type="Script" uid="uid://cepcxgeyhscxd" path="res://Scripts/LevelSelect/level_icon.gd" id="2_spnfy"]
+
+[node name="Sprite2D" type="Sprite2D"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_ydfqf")
+hframes = 2
+script = ExtResource("2_spnfy")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(14, -62)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(-14, 192, 64, 46, 70, 10, 54, -32, 20, -56, -16, -64, -50, -58, -82, -30, -96, 8, -94, 42)
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

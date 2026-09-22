@@ -1,0 +1,364 @@
+{
+	"00": {
+		"name": "Narrator",
+		"text": "As you continue to walk you see lord Pasta's mountain castle come into view.",
+		"next": "01",
+		"emotion": "talking",
+	},
+	
+	"01": {
+		"name": "Lumberjack",
+		"text": "Is that where we're heading?",
+		"next": "02",
+		"emotion": "talking",
+	},
+	
+	"02": {
+		"name": "Sweat",
+		"text": "Not quite. Lord Pasta has asked us to use a secret side door. So secret not even me or Sour know about it.",
+		"next": "03",
+		"emotion": "talking",
+	},
+	
+		"03": {
+		"name": "Narrator",
+		"text": "The group walks up to the castle then walks around the side of it until you spot the secret side door and a lump of scattered stone lying in sront of the door.",
+		"next": "04",
+		"emotion": "talking",
+	},
+	
+		"04": {
+		"name": "Narrator",
+		"text": "As the group walks closer towards the door the scattered stones start to shake and mold together forming a humanoid shape.",
+		"next": "05",
+		"emotion": "talking",
+	},
+	
+	"05": {
+		"name": "Sweat",
+		"text": "A golem.",
+		"next": "06",
+		"emotion": "talking",
+	},
+	
+	"06": {
+		"name": "Stone Golem",
+		"text": "STATE. NAME. FRIEND. OR. FOE.",
+		"next": "07",
+		"emotion": "talking",
+		"effect": "enemy_appear",
+	},
+	
+	"07": {
+		"name": "Sweat",
+		"text": "Sweat. Friend.",
+		"next": "08",
+		"emotion": "talking",
+	},
+	
+	"08": {
+		"name": "Sour",
+		"text": "Sour. Friend.",
+		"next": "09",
+		"emotion": "talking",
+	},
+	
+	"09": {
+		"name": "Stone Golem",
+		"text": "WELCOME. HOME. SWEAT. SOUR. THIRD. LIFEFORM. UNKOWN. TO. GOLEM",
+		"next": "10",
+		"emotion": "talking",
+	},
+	
+	"10": {
+		"name": "Sweat",
+		"text": "The mortal is with us.",
+		"next": "11",
+		"emotion": "talking",
+	},
+	
+	"11": {
+		"name": "Stone Golem",
+		"text": "FOR. SECURITY. PLEASE. ENTER. PASSWORD.",
+		"next": "12",
+		"emotion": "talking",
+	},
+	
+	"12": {
+		"name": "Lumberjack",
+		"text": "Password. I don't have a password.",
+		"next": "13",
+		"emotion": "talking",
+	},
+	
+	"13": {
+		"name": "Sour",
+		"text": "No need to panic lumberer, me and Sweaty each halve half of the password. My half is 'Rigat0ni2005'.",
+		"next": "fight_sweat_0",
+		"emotion": "talking",
+		"condition": {
+			"been_lost_1": "1",
+			"been_lost_2": "2",
+			"been_lost_3": "3",
+			"killed_tree": "4",
+			"fight_5": "5",
+			},
+		"condition_failed": "fight_sour_0"
+	},
+	
+		"fight_sweat_0": {
+		"name": "Lumberjack",
+		"text": "And whats your half Sweat?",
+		"next": "fight_sweat_1",
+		"emotion": "talking",
+		"change_condition": "killed_sweat"
+	},
+	
+		"fight_sweat_1": {
+		"name": "Sweat",
+		"text": "Hmph. I'm not telling.",
+		"next": "fight_sweat_2",
+		"emotion": "angry",
+	},
+	
+		"fight_sweat_2": {
+		"name": "Lumberjack",
+		"text": "What! Why.",
+		"next": "fight_sweat_3",
+	},
+	
+		"fight_sweat_3": {
+		"name": "Sweat",
+		"text": "Bacause this whole adventure you've always sided with Sour and never me, even after all those times Sour got us lost and made you fight guardians and lords. I've had enough. Let's see how much fun you'll have fighting a stone golem and one of lord Pasta's greatest advisors.",
+		"next": "fight_sweat_4",
+		"emotion": "angry",
+	},
+	
+		"fight_sweat_4": {
+		"name": "Sour",
+		"text": "Sweaty are you crazy.",
+		"next": "fight_sweat_5",
+		"emotion": "talking",
+	},
+	
+		"fight_sweat_5": {
+		"name": "Sweat",
+		"text": "If anything the mortal has driven me crazy.",
+		"next": "fight_sweat_6",
+		"emotion": "talking",
+	},
+	
+		"fight_sweat_6": {
+		"name": "Stone Golem",
+		"text": "NO. PASSWORD. GIVEN. ATTACK. SEQUENCE. INITIALISED.",
+		"next": "end",
+	},
+	
+	"fight_sour_0": {
+		"name": "Sweat",
+		"text": "Worry not mortal, Sour and me each halve half of the password. My half is 'Lingu1ne1!'.",
+		"next": "fight_sour_1",
+		"emotion": "talking",
+		"condition": {
+			"dropped_axe": "1",
+			"tree_cut_1": "2",
+			"choice_4_2": "3",
+			"riddle_5": "4",
+			"choice_6_1": "5",
+			},
+		"condition_failed": "14"
+	},
+	
+	"fight_sour_1": {
+		"name": "Lumberjack",
+		"text": "And whats your half Sour?",
+		"next": "fight_sour_2",
+		"emotion": "talking",
+		"change_condition": "killed_sour"
+	},
+	
+		"fight_sour_2": {
+		"name": "Sour",
+		"text": "Hmph. Like I'm going to tell you.",
+		"next": "fight_sour_3",
+		"emotion": "angry",
+	},
+	
+		"fight_sour_3": {
+		"name": "Lumberjack",
+		"text": "What! Why.",
+		"next": "fight_sour_4",
+	},
+	
+		"fight_sour_4": {
+		"name": "Sour",
+		"text": "What. You think you can just side with Sweaty all the time and think I'll just help you at the end when you finally need me. You think I'm just some smuck who's only job is to tag along and watch Sweaty work you to the bone and then endanger your life. And after all that you still keep choosing there way even though they made you drop your axe to avoid a fight. Well now you've got yourself a fight, how do you like the sound of fighting a stone golem and a lord's advisor.",
+		"next": "fight_sour_5",
+		"emotion": "angry",
+	},
+	
+		"fight_sour_5": {
+		"name": "Sweat",
+		"text": "Sour stop this madness at once.",
+		"next": "fight_sour_6",
+		"emotion": "talking",
+	},
+	
+		"fight_sour_6": {
+		"name": "Sour",
+		"text": "I'm not mad. You two are the ones that are mad.",
+		"next": "fight_sour_7",
+		"emotion": "talking",
+	},
+	
+		"fight_sour_7": {
+		"name": "Stone Golem",
+		"text": "NO. PASSWORD. GIVEN. ATTACK. SEQUENCE. INITIALISED.",
+		"next": "end",
+	},
+	
+	"14": {
+		"name": "Sweat",
+		"text": "Worry not mortal, Sour and me each halve half of the password. My half is 'Lingu1ne1!'.",
+		"next": "15",
+		"emotion": "talking",
+	},
+	
+	"15": {
+		"name": "Sour",
+		"text": "And my half is 'Rigat0ni2005'.",
+		"next": "16",
+		"emotion": "talking",
+	},
+	
+	"16": {
+		"name": "Lumberjack",
+		"text": "Great but what order do I say it in.",
+		"next": "17",
+		"emotion": "talking",
+	},
+	
+	"17": {
+		"name": "Sweat",
+		"text": "Uhh.",
+		"next": "18",
+		"emotion": "confused",
+	},
+	
+	"18": {
+		"name": "Sour",
+		"text": "Beats me.",
+		"next": "19",
+		"emotion": "confused",
+	},
+	
+	"19": {
+		"name": "Lumberjack",
+		"text": "Seriously.",
+		"next": "20",
+		"emotion": "talking",
+	},
+	
+	"20": {
+		"name": "Sweat",
+		"text": "Well it's a 50/50.",
+		"next": "21",
+		"emotion": "talking",
+	},
+	
+	"21": {
+		"name": "Sour",
+		"text": "That's some good odds.",
+		"next": "22",
+		"emotion": "talking",
+	},
+	
+	"22": {
+		"name": "Lumberjack",
+		"text": "I can't with you two.",
+		"next": "23",
+		"emotion": "talking",
+	},
+	
+	"23": {
+		"name": "Stone Golem",
+		"text": "PASSWORD. NOW.",
+		"next": "24",
+	},
+	
+	"24": {
+		"choices": {
+			"Rigat0ni2005Lingu1ne1!": "25",
+			"Lingu1ne1!Rigat0ni2005": "wrong_0",
+			"Wippity Woppity": "bad_wrong_0",
+		}
+	},
+	
+	"25": {
+		"name": "Stone Golem",
+		"text": "PASSWORD. CORRECT.",
+		"next": "26",
+		"emotion": "talking",
+		"change_condition": "entered_password"
+	},
+	
+	"26": {
+		"name": "Sweat",
+		"text": "Phew. That was lucky.",
+		"next": "27",
+		"emotion": "talking",
+	},
+	
+		"27": {
+		"name": "Stone Golem",
+		"text": "WOULD. YOU. LIKE. TO. SETUP. TWO. STEP. AUTHENTICATION. FOR. A. FASTER. AND. SAFER. LOGIN. EXPERIENCE",
+		"next": "28",
+		"emotion": "talking",
+	},
+	
+	"28": {
+		"name": "Sweat",
+		"text": "Maybe later. Now move your stone backside out the way.",
+		"next": "29",
+		"emotion": "talking",
+	},
+	
+	"29": {
+		"name": "Narrator",
+		"text": "The golem moves out of your way and now no longer blocks the door.",
+		"next": "end",
+		"emotion": "talking",
+	},
+	
+	"wrong_0": {
+		"name": "Stone Golem",
+		"text": "PASSWORD. INCORRECT. ATTACK. SEQUENCE. INITIALISED.",
+		"next": "end",
+		"emotion": "talking",
+		"change_condition": "entered_password_wrong"
+	},
+	
+	"bad_wrong_0": {
+		"name": "Sour",
+		"text": "What?",
+		"next": "bad_wrong_1",
+		"emotion": "confused",
+	},
+	
+	"bad_wrong_1": {
+		"name": "Sweat",
+		"text": "That wasn't even close to what we said.",
+		"next": "bad_wrong_2",
+		"emotion": "confused",
+	},
+	
+	"bad_wrong_2": {
+		"name": "Lumberjack",
+		"text": "I know. I panicked.",
+		"next": "wrong_0",
+	},
+	
+	"end": {
+		"trigger": "end"
+	}
+}

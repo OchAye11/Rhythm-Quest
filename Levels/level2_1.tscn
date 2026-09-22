@@ -1,0 +1,107 @@
+[gd_scene load_steps=10 format=3 uid="uid://xvt1xt2l2pkt"]
+
+[ext_resource type="Script" uid="uid://c13kf40ugme1j" path="res://Scripts/Levels/level2_1.gd" id="1_myvs7"]
+[ext_resource type="Texture2D" uid="uid://bchj0fuuve5e4" path="res://Textures/Forest.png" id="1_oclsg"]
+[ext_resource type="PackedScene" uid="uid://c8uvv8xg2iqrg" path="res://Objects/Audio/conductor.tscn" id="3_dgsxa"]
+[ext_resource type="Texture2D" uid="uid://bgysijdr8mddv" path="res://Textures/Characters.png" id="3_myvs7"]
+[ext_resource type="PackedScene" uid="uid://dgwocmmccqjkj" path="res://Objects/Game/square_icon.tscn" id="4_dgi6k"]
+[ext_resource type="PackedScene" uid="uid://dytpi2jk4eaeo" path="res://Objects/dialogue_player.tscn" id="4_myvs7"]
+[ext_resource type="PackedScene" uid="uid://osrcbqlysjig" path="res://Objects/Game/scoreboard.tscn" id="5_dgi6k"]
+[ext_resource type="AudioStream" uid="uid://b6jruaj630q04" path="res://Music/ForestSong.wav" id="6_e3u01"]
+[ext_resource type="PackedScene" uid="uid://prxf2p3eq74j" path="res://Objects/LevelSelect/pause_menu.tscn" id="6_iqcrq"]
+
+[node name="level2_1" type="Node2D"]
+script = ExtResource("1_myvs7")
+
+[node name="Environment" type="Node2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="Environment"]
+position = Vector2(640, 360)
+texture = ExtResource("1_oclsg")
+
+[node name="Sweat" type="Sprite2D" parent="Environment"]
+position = Vector2(100, 540)
+scale = Vector2(-0.3, 0.3)
+texture = ExtResource("3_myvs7")
+hframes = 6
+vframes = 2
+
+[node name="Sour" type="Sprite2D" parent="Environment"]
+position = Vector2(100, 170)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_myvs7")
+hframes = 6
+vframes = 2
+frame = 6
+
+[node name="LabelHolder" type="Node2D" parent="."]
+position = Vector2(81, 67)
+
+[node name="Score" type="Label" parent="LabelHolder"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+offset_right = 56.0
+grow_vertical = 0
+text = "Score: "
+
+[node name="Combo" type="Label" parent="LabelHolder"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="square_icon_sour" parent="." instance=ExtResource("4_dgi6k")]
+offset_left = 226.0
+offset_top = 140.985
+offset_right = 266.0
+offset_bottom = 220.985
+button_input = "Up"
+normal_color = "ff625f"
+pressed_color = "c8302e"
+
+[node name="square_icon" parent="." instance=ExtResource("4_dgi6k")]
+offset_left = 226.0
+offset_top = 320.615
+offset_right = 266.0
+offset_bottom = 400.615
+button_input = "Right"
+normal_color = "#96f0ff"
+pressed_color = "#3de3ff"
+
+[node name="square_icon_sweat" parent="." instance=ExtResource("4_dgi6k")]
+offset_left = 226.0
+offset_top = 505.39
+offset_right = 266.0
+offset_bottom = 585.39
+color = Color(0.203922, 0.752941, 0.223529, 1)
+button_input = "Down"
+normal_color = "#6bfd71"
+pressed_color = "#34c039"
+
+[node name="Conductor" parent="." instance=ExtResource("3_dgsxa")]
+stream = ExtResource("6_e3u01")
+
+[node name="DialoguePlayer" parent="." instance=ExtResource("4_myvs7")]
+dialogue_file = "res://Dialogue/level_2_1_start.json"
+
+[node name="Scoreboard" parent="." instance=ExtResource("5_dgi6k")]
+visible = false
+
+[node name="PauseMenu" parent="." instance=ExtResource("6_iqcrq")]
+visible = false
+
+[node name="TimerContainer" type="Node2D" parent="."]
+
+[node name="DialogueTimer" type="Timer" parent="TimerContainer"]
+wait_time = 2.0
+one_shot = true
+
+[node name="EndTimer" type="Timer" parent="TimerContainer"]
+wait_time = 4.0
+one_shot = true
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="beat" from="Conductor" to="." method="_on_conductor_beat"]
+[connection signal="measured" from="Conductor" to="." method="_on_conductor_measured"]
+[connection signal="timeout" from="TimerContainer/DialogueTimer" to="." method="_on_dialogue_timer_timeout"]
+[connection signal="timeout" from="TimerContainer/EndTimer" to="." method="_on_end_timer_timeout"]

@@ -1,0 +1,154 @@
+{
+	"00": {
+		"name": "Sweat",
+		"text": "Three times! How is it possible to get lost three times! What happened to you being on home turf!",
+		"next": "lost_three_0",
+		"emotion": "angry",
+		"condition": {
+			"been_lost_1": "1",
+			"been_lost_2": "2",
+			"been_lost_3": "3",
+			},
+		"condition_failed": "lost_two_0"
+	},
+	
+	"lost_three_0": {
+		"name": "Sour",
+		"text": "To be honest I don't know. One minute we're on the trail next minute we're not. I must have been cursed.",
+		"next": "lost_three_1",
+		"emotion": "confused",
+	},
+	
+	"lost_three_1": {
+		"name": "Sweat",
+		"text": "The only thing you've been cursed with is stupidity.",
+		"next": "lost_three_2",
+		"emotion": "talking",
+	},
+	
+	"lost_three_2": {
+		"name": "Sour",
+		"text": "Yeah well if I'm so stupid then why does the lumberer always pick me when it comes to directions.",
+		"next": "lost_three_3",
+		"emotion": "talking",
+	},
+	
+	"lost_three_3": {
+		"name": "Sweat",
+		"text": "Cause the mortal is also stupid.",
+		"next": "lost_three_4",
+		"emotion": "talking",
+	},
+	
+	"lost_three_4": {
+		"name": "Lumberjack",
+		"text": "Takes one to know one.",
+		"next": "lost_three_5",
+		"emotion": "talking",
+	},
+	
+	"lost_three_5": {
+		"name": "Sour",
+		"text": "You tell them lumberer.",
+		"next": "lost_three_6",
+		"emotion": "talking",
+	},
+	
+	"lost_three_6": {
+		"name": "Sweat",
+		"text": "I can't take this any more. I'm surrounded by idiots.",
+		"next": "lost_three_7",
+		"emotion": "talking",
+	},
+	
+	"lost_three_7": {
+		"name": "Narrator",
+		"text": "The group continues forward, mostly in silence.",
+		"next": "end",
+		"emotion": "talking",
+	},
+	
+	"lost_two_0": {
+		"name": "Sweat",
+		"text": "You got lost again! How does that happen.",
+		"next": "lost_two_2",
+		"emotion": "angry",
+		"condition": {
+			"been_lost_1": "1",
+			"been_lost_3": "3",
+			},
+		"condition_failed": "lost_two_1"
+	},
+	
+	"lost_two_1": {
+		"name": "Sweat",
+		"text": "You got lost again! How does that happen.",
+		"next": "lost_two_2",
+		"emotion": "angry",
+		"condition": {
+			"been_lost_2": "2",
+			"been_lost_3": "3",
+			},
+		"condition_failed": "lost_one_0"
+	},
+	
+	"lost_two_2": {
+		"name": "Sour",
+		"text": "I dunno, it sorta happened. We were following the trail and next thing I know the trail's gone.",
+		"next": "lost_two_3",
+		"emotion": "talking",
+	},
+	
+	"lost_two_3": {
+		"name": "Sweat",
+		"text": "This is why we never follow you.",
+		"next": "lost_two_4",
+		"emotion": "talking",
+	},
+	
+	"lost_two_4": {
+		"name": "Sour",
+		"text": "We're back on the trail now so there's nothing to worry about.",
+		"next": "lost_two_5",
+		"emotion": "talking",
+	},
+	
+	"lost_two_5": {
+		"name": "Narrator",
+		"text": "As the group continues forward they soon reach lord Pasta's mountain castle.",
+		"next": "end",
+		"emotion": "talking",
+	},
+	
+		"lost_one_0": {
+		"name": "Sweat",
+		"text": "How did you manage to get lost on a marked trail.",
+		"next": "lost_one_1",
+		"emotion": "angry",
+	},
+	
+	"lost_one_1": {
+		"name": "Sour",
+		"text": "It's a gift.",
+		"next": "lost_one_2",
+		"emotion": "talking",
+	},
+	
+	"lost_one_2": {
+		"name": "Sweat",
+		"text": "Well keep your gifts to yourself.",
+		"next": "lost_one_3",
+		"emotion": "talking",
+	},
+	
+	"lost_one_3": {
+		"name": "Narrator",
+		"text": "The group continues forward.",
+		"next": "end",
+		"emotion": "talking",
+	},
+	
+	"end": {
+		"trigger": "end"
+	}
+}

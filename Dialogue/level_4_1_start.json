@@ -1,0 +1,93 @@
+{
+	"00": {
+		"name": "Sweat",
+		"text": "Left again!. Have you got moss for brains mortal.",
+		"next": "lost_before_0",
+		"emotion": "angry",
+		"condition": "been_lost_1",
+		"condition_failed": "01"
+	},
+	
+	"lost_before_0": {
+		"name": "Sour",
+		"text": "Don't listen to Sweaty lumberer, everyone else knows your cool like me.",
+		"next": "lost_before_1",
+		"emotion": "happy",
+	},
+	
+		"lost_before_1": {
+		"name": "Sweat",
+		"text": "Your not cool. You never have been cool and you never will.",
+		"next": "lost_before_2",
+		"emotion": "angry",
+	},
+	
+		"lost_before_2": {
+		"name": "Sour",
+		"text": "Wahh wahh. Sounds like someone's mad cause the lumberer keeps agreeing with me and not you.",
+		"next": "lost_before_4",
+		"emotion": "talking",
+		"condition": "killed_tree",
+		"condition_failed": "lost_before_3"
+	},
+	
+		"lost_before_3": {
+		"name": "Sour",
+		"text": "Looks like someones mad the lumberer is picking favourites.",
+		"next": "lost_before_4",
+		"emotion": "talking",
+	},
+	
+		"lost_before_4": {
+		"name": "Sweat",
+		"text": "Grrr. Just you wait. I bet we're going to get lost again.",
+		"next": "lost_before_5",
+		"emotion": "angry",
+	},
+	
+		"lost_before_5": {
+		"name": "Sour",
+		"text": "There's absolutly no way we're going to get lost again.",
+		"next": "last_line",
+		"emotion": "talking",
+	},
+
+	"01": {
+		"name": "Sour",
+		"text": "Nice choice lumberer. Thanks for not letting Sweaty persuade you like last time.",
+		"next": "02",
+		"emotion": "happy",
+	},
+
+	"02": {
+		"name": "Sweat",
+		"text": "I guess it's only fair since we went right last time. I still don't like it though.",
+		"next": "03",
+		"emotion": "talking",
+	},
+
+	"03": {
+		"name": "Sour",
+		"text": "Oh come on what's the worst that could happen.",
+		"next": "04",
+		"emotion": "talking",
+	},
+	
+	"04": {
+		"name": "Narrator",
+		"text": "The group got lost. Use the 'wsd' or 'Up', 'Down' and 'Right' arrow keys in time with the beat to find your way back onto the trail.",
+		"next": "end",
+		"emotion": "talking",
+	},
+
+	"last_line": {
+		"name": "Narrator",
+		"text": "The group got lost again.",
+		"next": "end",
+		"emotion": "talking",
+	},
+
+	"end": {
+		"trigger": "end"
+	}
+}

@@ -1,0 +1,156 @@
+[gd_scene load_steps=6 format=3 uid="uid://osrcbqlysjig"]
+
+[ext_resource type="Texture2D" uid="uid://bmxypqldyl4pm" path="res://Textures/UI.png" id="1_5vkjt"]
+[ext_resource type="Script" uid="uid://b142pag5h4lyj" path="res://Scripts/Game/scoreboard.gd" id="1_082yw"]
+[ext_resource type="PackedScene" uid="uid://doh5ejt2hme7a" path="res://Objects/Game/next_arrow.tscn" id="3_082yw"]
+[ext_resource type="Theme" uid="uid://dd7vnve77hcbm" path="res://Textures/Theme/Main_theme.tres" id="3_848qi"]
+[ext_resource type="PackedScene" uid="uid://c0bchh4dqplp7" path="res://Animations/Fade_Transition.tscn" id="4_sulkx"]
+
+[node name="Scoreboard" type="CanvasLayer"]
+script = ExtResource("1_082yw")
+
+[node name="Background" type="NinePatchRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -213.5
+offset_top = -273.0
+offset_right = 213.5
+offset_bottom = 273.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_5vkjt")
+region_rect = Rect2(384.218, 0, 128, 128)
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="ScoreBackground" type="NinePatchRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -168.0
+offset_top = -34.0
+offset_right = 169.0
+offset_bottom = 149.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_5vkjt")
+region_rect = Rect2(0.0804024, 0, 128.038, 128)
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="ScoreBoard" type="Label" parent="."]
+offset_left = 298.79
+offset_top = 21.51
+offset_right = 985.79
+offset_bottom = 189.51
+theme = ExtResource("3_848qi")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 120
+text = "Score Board"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StarContainer" type="Node2D" parent="."]
+position = Vector2(0, 37.055)
+
+[node name="StarBackground" type="Sprite2D" parent="StarContainer"]
+position = Vector2(520, 204.6)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("1_5vkjt")
+hframes = 4
+vframes = 3
+frame = 9
+
+[node name="StarBackground2" type="Sprite2D" parent="StarContainer"]
+position = Vector2(758, 204.6)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("1_5vkjt")
+hframes = 4
+vframes = 3
+frame = 9
+
+[node name="StarBackground3" type="Sprite2D" parent="StarContainer"]
+position = Vector2(639, 156.6)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("1_5vkjt")
+hframes = 4
+vframes = 3
+frame = 9
+
+[node name="PoorStar" type="Sprite2D" parent="StarContainer"]
+position = Vector2(520, 204.6)
+scale = Vector2(0.001, 0.001)
+texture = ExtResource("1_5vkjt")
+hframes = 4
+vframes = 3
+frame = 8
+
+[node name="GreatStar" type="Sprite2D" parent="StarContainer"]
+position = Vector2(758, 204.6)
+scale = Vector2(0.001, 0.001)
+texture = ExtResource("1_5vkjt")
+hframes = 4
+vframes = 3
+frame = 8
+
+[node name="GoodStar" type="Sprite2D" parent="StarContainer"]
+position = Vector2(639, 156.6)
+scale = Vector2(0.001, 0.001)
+texture = ExtResource("1_5vkjt")
+hframes = 4
+vframes = 3
+frame = 8
+
+[node name="TextContainer" type="Node2D" parent="."]
+position = Vector2(640, 383.32)
+
+[node name="Score" type="Label" parent="TextContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -11.5
+offset_right = 44.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_848qi")
+theme_override_font_sizes/font_size = 35
+text = "Score: 1000"
+
+[node name="MaxCombo" type="Label" parent="TextContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -130.0
+offset_top = 33.979
+offset_right = 130.0
+offset_bottom = 82.979
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_848qi")
+theme_override_font_sizes/font_size = 35
+text = "Max Combo: 37"
+
+[node name="NextArrow" parent="." instance=ExtResource("3_082yw")]
+position = Vector2(795, 572)
+
+[node name="Fade_Trans" parent="." instance=ExtResource("4_sulkx")]
+visible = false
+
+[node name="FadeTimer" type="Timer" parent="Fade_Trans"]
+
+[connection signal="timeout" from="Fade_Trans/FadeTimer" to="." method="_on_fade_timer_timeout"]

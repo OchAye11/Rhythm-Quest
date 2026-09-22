@@ -1,0 +1,46 @@
+{
+	"00": {
+		"name": "Lumberjack",
+		"text": "Huph. Wheeze. Geez. That tree was thick.",
+		"next": "01"
+	},
+
+	"01": {
+		"name": "Sour",
+		"text": "Well done lumberer, truly you are a master of your proffesion.",
+		"next": "02",
+		"emotion": "talking",
+	},
+
+	"02": {
+		"name": "Sweat",
+		"text": "Well done indead. Now let's get going.",
+		"next": "03",
+		"emotion": "talking",
+	},
+
+	"03": {
+		"name": "Lumberjack",
+		"text": "Wait. Can't I have a minute to catch my breath.",
+		"next": "04",
+		"emotion": "talking",
+	},
+
+	"04": {
+		"name": "Sweat",
+		"text": "No.",
+		"next": "05",
+		"emotion": "talking",
+	},
+	
+	"05": {
+		"name": "Sour",
+		"text": "This is why we should have went left.",
+		"next": "end",
+		"emotion": "talking",
+	},
+	
+	"end": {
+		"trigger": "end"
+	}
+}

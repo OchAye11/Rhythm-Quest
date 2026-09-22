@@ -1,0 +1,101 @@
+[gd_scene load_steps=10 format=3 uid="uid://mknmt8e8g8ur"]
+
+[ext_resource type="Script" uid="uid://i53uayv8ibcf" path="res://Scripts/Levels/level_6_1.gd" id="1_2kmkb"]
+[ext_resource type="Texture2D" uid="uid://0mtf568xs8da" path="res://Textures/InsideMountain.png" id="2_2kmkb"]
+[ext_resource type="PackedScene" uid="uid://c8uvv8xg2iqrg" path="res://Objects/Audio/conductor.tscn" id="2_3ukjo"]
+[ext_resource type="Texture2D" uid="uid://bnkvw4v880rjl" path="res://Textures/Tree.png" id="3_0y5gi"]
+[ext_resource type="PackedScene" uid="uid://osrcbqlysjig" path="res://Objects/Game/scoreboard.tscn" id="3_wak1b"]
+[ext_resource type="PackedScene" uid="uid://dytpi2jk4eaeo" path="res://Objects/dialogue_player.tscn" id="4_bq4yy"]
+[ext_resource type="PackedScene" uid="uid://bqqo2ofo780o" path="res://Objects/Game/ring_icon.tscn" id="4_islly"]
+[ext_resource type="PackedScene" uid="uid://prxf2p3eq74j" path="res://Objects/LevelSelect/pause_menu.tscn" id="5_2kmkb"]
+[ext_resource type="AudioStream" uid="uid://wvtdy8wa6nib" path="res://Music/MountainSong.wav" id="6_0y5gi"]
+
+[node name="level6_1" type="Node2D"]
+script = ExtResource("1_2kmkb")
+
+[node name="Environment" type="Node2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="Environment"]
+position = Vector2(640, 360)
+texture = ExtResource("2_2kmkb")
+
+[node name="TreeBranch" type="Sprite2D" parent="Environment"]
+position = Vector2(684.455, 546.409)
+rotation = 4.71239
+scale = Vector2(1, 0.514648)
+texture = ExtResource("3_0y5gi")
+hframes = 2
+
+[node name="TreeLeaves" type="Sprite2D" parent="Environment"]
+position = Vector2(411.455, 527.909)
+rotation = 3.14159
+scale = Vector2(0.630682, 0.618963)
+texture = ExtResource("3_0y5gi")
+hframes = 2
+frame = 1
+
+[node name="LabelHolder" type="Node2D" parent="."]
+position = Vector2(81, 67)
+
+[node name="Score" type="Label" parent="LabelHolder"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+offset_right = 56.0
+grow_vertical = 0
+text = "Score: "
+
+[node name="Combo" type="Label" parent="LabelHolder"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Left_Ring_Icon" parent="." instance=ExtResource("4_islly")]
+visible = false
+position = Vector2(388.715, 360)
+button_input = "Left"
+pressed_frame = 2
+
+[node name="Up_Ring_Icon" parent="." instance=ExtResource("4_islly")]
+visible = false
+position = Vector2(651.37, 97)
+frame = 1
+button_input = "Up"
+pressed_frame = 3
+
+[node name="Right_Ring_Icon" parent="." instance=ExtResource("4_islly")]
+visible = false
+position = Vector2(911.37, 353)
+frame = 5
+button_input = "Right"
+pressed_frame = 7
+
+[node name="Down_Ring_Icon" parent="." instance=ExtResource("4_islly")]
+visible = false
+position = Vector2(650.37, 616)
+frame = 4
+button_input = "Down"
+pressed_frame = 6
+
+[node name="Conductor" parent="." instance=ExtResource("2_3ukjo")]
+stream = ExtResource("6_0y5gi")
+
+[node name="Scoreboard" parent="." instance=ExtResource("3_wak1b")]
+visible = false
+
+[node name="DialoguePlayer" parent="." instance=ExtResource("4_bq4yy")]
+dialogue_file = "res://Dialogue/level_6_1_start.json"
+
+[node name="PauseMenu" parent="." instance=ExtResource("5_2kmkb")]
+visible = false
+
+[node name="TimerContainer" type="Node2D" parent="."]
+
+[node name="EndTimer" type="Timer" parent="TimerContainer"]
+wait_time = 4.0
+one_shot = true
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="beat" from="Conductor" to="." method="_on_conductor_beat"]
+[connection signal="measured" from="Conductor" to="." method="_on_conductor_measured"]
+[connection signal="timeout" from="TimerContainer/EndTimer" to="." method="_on_end_timer_timeout"]

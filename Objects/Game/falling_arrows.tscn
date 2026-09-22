@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://csoo4ivfnvnkl"]
+
+[ext_resource type="Script" uid="uid://cp06q35carnrw" path="res://Scripts/Game/falling_arrows.gd" id="1_c31eh"]
+[ext_resource type="Texture2D" uid="uid://gpns41l0r3le" path="res://Textures/Arrows.png" id="2_c31eh"]
+[ext_resource type="Theme" uid="uid://dd7vnve77hcbm" path="res://Textures/Theme/Main_theme.tres" id="3_iy2gv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iy2gv"]
+size = Vector2(72, 67)
+
+[node name="FallingArrows" type="Area2D"]
+script = ExtResource("1_c31eh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_c31eh")
+hframes = 4
+vframes = 3
+frame = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_iy2gv")
+
+[node name="LabelHolder" type="Node2D" parent="."]
+
+[node name="Label" type="Label" parent="LabelHolder"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(2, 2)
+theme = ExtResource("3_iy2gv")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

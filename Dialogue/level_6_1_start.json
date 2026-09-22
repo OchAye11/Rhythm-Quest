@@ -1,0 +1,507 @@
+{
+	"00": {
+		"name": "Sour",
+		"text": "You always pick Sweatys side and never mine.",
+		"next": "sweat_reply_0",
+		"emotion": "angry",
+		"condition": {
+			"tree_cut_1": "1",
+			"dropped_axe": "2",
+			"choice_4_2": "3",
+			"riddle_5": "4",
+			},
+		"condition_failed": "sour_choices_0"
+	},
+	
+	"sour_choices_0": {
+		"name": "Sour",
+		"text": "You pick Sweaty all the time even when they makes you drop your axe and endanger your life.",
+		"next": "sweat_reply_0",
+		"emotion": "angry",
+		"condition": {
+			"tree_cut_1": "1",
+			"dropped_axe": "2",
+			"choice_4_2": "3",
+			},
+		"condition_failed": "sour_choices_1"
+	},
+	
+	"sour_choices_1": {
+		"name": "Sour",
+		"text": "You pick Sweaty all the time even when they makes you drop your axe.",
+		"next": "sweat_reply_0",
+		"emotion": "angry",
+		"condition": {
+			"tree_cut_1": "1",
+			"dropped_axe": "2",
+			"riddle_5": "4",
+			},
+		"condition_failed": "sour_choices_2"
+	},
+	
+	"sour_choices_2": {
+		"name": "Sour",
+		"text": "You pick Sweaty all the time even when they endanger your life.",
+		"next": "sweat_reply_0",
+		"emotion": "angry",
+		"condition": {
+			"tree_cut_1": "1",
+			"riddle_5": "4",
+			"choice_4_2": "3",
+			},
+		"condition_failed": "sour_choices_3"
+	},
+	
+		"sour_choices_3": {
+		"name": "Sour",
+		"text": "You pick Sweaty all the time even when they makes you drop your axe and endanger your life by channeling magic into your body.",
+		"next": "sweat_reply_0",
+		"emotion": "angry",
+		"condition": {
+			"riddle_5": "4",
+			"dropped_axe": "2",
+			"choice_4_2": "3",
+			},
+		"condition_failed": "sour_choices_4"
+	},
+	
+	"sour_choices_4": {
+		"name": "Sour",
+		"text": "That's fine let's just follow Sweaty again even if they made you exert yourself and didn't give you a break.",
+		"next": "sweat_reply_0",
+		"emotion": "angry",
+		"condition": "tree_cut_1",
+		"condition_failed": "sour_choices_5"
+	},
+	
+	"sour_choices_5": {
+		"name": "Sour",
+		"text": "That's fine let's just follow Sweaty even if they made you drop your axe.",
+		"next": "sweat_reply_0",
+		"emotion": "angry",
+		"condition": "dropped_axe",
+		"condition_failed": "sour_choices_6"
+	},
+	
+	"sour_choices_6": {
+		"name": "Sour",
+		"text": "That's fine let's just follow Sweaty again even if they almost killed you channeling magic into your body.",
+		"next": "sweat_reply_0",
+		"emotion": "angry",
+		"condition": "choice_4_2",
+		"condition_failed": "sour_choices_7"
+	},
+	
+	"sour_choices_7": {
+		"name": "Sour",
+		"text": "That's fine let's just follow Sweaty even if they let one of lord Pasta's greatest enemies walk away.",
+		"next": "sweat_reply_0",
+		"emotion": "angry",
+		"condition": "riddle_5",
+		"condition_failed": "sour_choices_8"
+	},
+	
+		"sour_choices_8": {
+		"name": "Sour",
+		"text": "Fine I guess we can follow Sweaty this one time.",
+		"next": "sweat_reply_0",
+		"emotion": "angry",
+	},
+	
+	"sweat_reply_0": {
+		"name": "Sweat",
+		"text": "I knew you were smart the moment I layed my eyes on you mortal. Sticking with me this whole time has made this adventure a breeze.",
+		"next": "01",
+		"emotion": "happy",
+		"condition": {
+			"tree_cut_1": "1",
+			"dropped_axe": "2",
+			"choice_4_2": "3",
+			"riddle_5": "4",
+			},
+		"condition_failed": "sweat_reply_1"
+	},
+	
+	"sweat_reply_1": {
+		"name": "Sweat",
+		"text": "Your trust in me won't be going to waste mortal. You've proved your worth multiple times this adventure and we're almost at our goal.",
+		"next": "01",
+		"emotion": "happy",
+		"condition": {
+			"tree_cut_1": "1",
+			"choice_4_2": "3",
+			},
+		"condition_failed": "sweat_reply_2"
+	},
+	
+	"sweat_reply_2": {
+		"name": "Sweat",
+		"text": "Your trust in me won't be going to waste mortal. You've always put the quest first even at the expense of your axe, lord Pasta won't forget that.",
+		"next": "01",
+		"emotion": "happy",
+		"condition": {
+			"dropped_axe": "2",
+			"riddle_5": "4",
+			},
+		"condition_failed": "sweat_reply_3"
+	},
+	
+	"sweat_reply_3": {
+		"name": "Sweat",
+		"text": "You made the correct choice picking me mortal.",
+		"next": "01",
+		"emotion": "happy",
+	},
+	
+	"01": {
+		"name": "Sour",
+		"text": "Let's just keep on moving.",
+		"next": "02",
+		"emotion": "talking",
+	},
+	
+	"02": {
+		"name": "Narrator",
+		"text": "As your group continues along the trail you come across a large tree that has fallen over and is now blocking the road.",
+		"next": "tree_before_0",
+		"emotion": "talking",
+	},
+	
+	"tree_before_0": {
+		"name": "Sweat",
+		"text": "Are you kidding me! Another tree!",
+		"next": "tree_before_1",
+		"emotion": "angry",
+		"condition": "tree_cut_1",
+		"condition_failed": "03"
+	},
+	
+		"tree_before_1": {
+		"name": "Sour",
+		"text": "Ha ha. Two fallen tree's and a broken bridge. I think you might have broken a mirror at some point Sweaty.",
+		"next": "tree_before_3",
+		"emotion": "happy",
+		"condition": "choice_4_2",
+		"condition_failed": "tree_before_2"
+	},
+	
+		"tree_before_2": {
+		"name": "Sour",
+		"text": "Ha ha. Two fallen tree's. That's some bad luck.",
+		"next": "tree_before_3",
+		"emotion": "happy",
+	},
+	
+	"tree_before_3": {
+		"name": "Sweat",
+		"text": "This is fine. This is fine. Mortal get up here and start swinging that axe...",
+		"next": "tree_before_5",
+		"emotion": "talking",
+		"condition": "dropped_axe",
+		"condition_failed": "tree_before_4"
+	},
+	
+	"tree_before_4": {
+		"name": "Sweat",
+		"text": "This is fine. This is fine. Mortal get up here and start swinging that axe of yours again.",
+		"next": "finished_0",
+		"emotion": "talking",
+	},
+	
+		"finished_0": {
+		"name": "Lumberjack",
+		"text": "As long as I get a rest after.",
+		"next": "finished_1",
+		"emotion": "talking",
+	},
+	
+	"finished_1": {
+		"name": "Sweat",
+		"text": "Sure, sure, whatever just get it done.",
+		"next": "end",
+		"emotion": "talking",
+	},
+	
+	"tree_before_5": {
+		"name": "Sour",
+		"text": "HA HA HA HA. What axe? The one you made him give up.",
+		"next": "tree_before_6",
+		"emotion": "happy",
+	},
+	
+	"tree_before_6": {
+		"name": "Sweat",
+		"text": "Grrrr.",
+		"next": "tree_before_7",
+		"emotion": "angry",
+	},
+	
+	"tree_before_7": {
+		"name": "Sour",
+		"text": "Go ahead lumberer swing your imaginary axe.",
+		"next": "tree_before_8",
+		"emotion": "happy",
+	},
+	
+		"tree_before_8": {
+		"name": "Sweat",
+		"text": "Enough. Sour we're going to channel our magic through the mortal again so they can move the tree.",
+		"next": "tree_before_9",
+		"emotion": "talking",
+		"condition": "choice_4_2",
+		"condition_failed": "no_magic_0"
+	},
+	
+	"no_magic_0": {
+		"name": "Sweat",
+		"text": "Enough. I've got an idea. Sour, me and you are going to channel our magic through the mortal so they can move the tree off the trail.",
+		"next": "no_magic_1",
+		"emotion": "talking",
+	},
+	
+	"no_magic_1": {
+		"name": "Sour",
+		"text": "What! That's crazy. It could kill the lumberer.",
+		"next": "no_magic_2",
+		"emotion": "talking",
+	},
+	
+	"no_magic_2": {
+		"name": "Lumberjack",
+		"text": "Wait I don't want to do anything that will kill me. Why can't you two use your own magic to move it.",
+		"next": "no_magic_3",
+		"emotion": "talking",
+	},
+	
+	"no_magic_3": {
+		"name": "Sour",
+		"text": "It's a long story but we had our magical licences removed after we cheated at musical chairs.",
+		"next": "no_magic_4",
+		"emotion": "talking",
+	},
+	
+	"no_magic_4": {
+		"name": "Lumberjack",
+		"text": "Huh.",
+		"next": "no_magic_5",
+		"emotion": "talking",
+	},
+	
+	"no_magic_5": {
+		"name": "Sweat",
+		"text": "Look we've got no time we're almost there. We're doing this.",
+		"next": "no_magic_6",
+		"emotion": "talking",
+	},
+	
+	"no_magic_6": {
+		"name": "Lumberjack",
+		"text": "Don't I get a say in this.",
+		"next": "no_magic_7",
+		"emotion": "talking",
+	},
+	
+	"no_magic_7": {
+		"name": "Sweat",
+		"text": "No.",
+		"next": "no_magic_8",
+		"emotion": "talking",
+	},
+	
+	"no_magic_8": {
+		"name": "Narrator",
+		"text": "Use the 'wasd' or arrow keys in time with the beat to channel the magic.",
+		"next": "end",
+		"emotion": "talking",
+	},
+	
+	"tree_before_9": {
+		"name": "Lumberjack",
+		"text": "What. Not again. My body still aches from the last time we did it.",
+		"next": "tree_before_10",
+		"emotion": "talking",
+	},
+	
+	"tree_before_10": {
+		"name": "Sweat",
+		"text": "That's just the magic pulling your body apart. But don't worry it worked once so it will work again, probably.",
+		"next": "tree_before_11",
+		"emotion": "talking",
+	},
+	
+	"tree_before_11": {
+		"name": "Lumberjack",
+		"text": "Do I have to.",
+		"next": "tree_before_12",
+		"emotion": "talking",
+	},
+	
+		"tree_before_12": {
+		"name": "Sweat",
+		"text": "Yes.",
+		"next": "end",
+		"emotion": "talking",
+	},
+	
+	"03": {
+		"name": "Sweat",
+		"text": "A tree. Great. Just what we need.",
+		"next": "04",
+		"emotion": "talking",
+	},
+	
+	"04": {
+		"name": "Sour",
+		"text": "All I'm saying is that we wouldn't have gotten blocked by a tree if we went my way.",
+		"next": "05",
+		"emotion": "talking",
+	},
+	
+	"05": {
+		"name": "Lumberjack",
+		"text": "What now?",
+		"next": "06",
+		"emotion": "talking",
+	},
+	
+	"06": {
+		"name": "Sweat",
+		"text": "No other way than to go through it. Mortal get to chopping.",
+		"next": "no_axe_0",
+		"emotion": "talking",
+	},
+	
+	"no_axe_0": {
+		"name": "Lumberjack",
+		"text": "With what?",
+		"next": "no_axe_1",
+		"emotion": "talking",
+		"condition": "dropped_axe",
+		"condition_failed": "07"
+	},
+	
+	"no_axe_1": {
+		"name": "Sweat",
+		"text": "...",
+		"next": "no_axe_2",
+		"emotion": "talking",
+	},
+	
+	"no_axe_2": {
+		"name": "Sour",
+		"text": "Ha ha ha. Guess who forgot they made the lumberer drop their axe. Ha ha ha.",
+		"next": "no_axe_3",
+		"emotion": "happy",
+	},
+	
+	"no_axe_3": {
+		"name": "Sweat",
+		"text": "Grrr. We'll just halve to channel our magic through the lumberer again so they can move the tree.",
+		"next": "no_axe_4",
+		"emotion": "angry",
+		"condition": "choice_4_2",
+		"condition_failed": "no_magic_no_axe_0"
+	},
+	
+	"no_magic_no_axe_0": {
+		"name": "Sweat",
+		"text": "Enough. I've got an idea. Sour, me and you are going to channel our magic through the mortal so they can move the tree off the trail.",
+		"next": "no_magic_no_axe_1",
+		"emotion": "talking",
+	},
+	
+	"no_magic_no_axe_1": {
+		"name": "Sour",
+		"text": "What! That's crazy. It could kill the lumberer.",
+		"next": "no_magic_no_axe_2",
+		"emotion": "talking",
+	},
+	
+	"no_magic_no_axe_2": {
+		"name": "Lumberjack",
+		"text": "Wait I don't want to do anything that will kill me. Why can't you two use your own magic to move it.",
+		"next": "no_magic_no_axe_3",
+		"emotion": "talking",
+	},
+	
+	"no_magic_no_axe_3": {
+		"name": "Sour",
+		"text": "It's a long story but we had our magical licences removed after we cheated at musical chairs.",
+		"next": "no_magic_no_axe_4",
+		"emotion": "talking",
+	},
+	
+	"no_magic_no_axe_4": {
+		"name": "Lumberjack",
+		"text": "Huh.",
+		"next": "no_magic_no_axe_5",
+		"emotion": "talking",
+	},
+	
+	"no_magic_no_axe_5": {
+		"name": "Sweat",
+		"text": "Look we've got no time we're almost there. We're doing this.",
+		"next": "no_magic_no_axe_6",
+		"emotion": "talking",
+	},
+	
+	"no_magic_no_axe_6": {
+		"name": "Lumberjack",
+		"text": "Don't I get a say in this.",
+		"next": "no_magic_no_axe_7",
+		"emotion": "talking",
+	},
+	
+	"no_magic_no_axe_7": {
+		"name": "Sweat",
+		"text": "No.",
+		"next": "no_magic_no_axe_8",
+		"emotion": "talking",
+	},
+	
+	"no_magic_no_axe_8": {
+		"name": "Narrator",
+		"text": "Use the 'wasd' or arrow keys in time with the beat to channel the magic.",
+		"next": "end",
+		"emotion": "talking",
+	},
+	
+	"no_axe_4": {
+		"name": "Lumberjack",
+		"text": "What. Not again. My body still aches from the last time we did it.",
+		"next": "no_axe_5",
+		"emotion": "talking",
+	},
+	
+	"no_axe_5": {
+		"name": "Sweat",
+		"text": "That's just the magic pulling your body apart. But don't worry it worked once so it will work again, probably.",
+		"next": "no_axe_6",
+		"emotion": "talking",
+	},
+	
+	"no_axe_6": {
+		"name": "Lumberjack",
+		"text": "Do I have to.",
+		"next": "no_axe_7",
+		"emotion": "talking",
+	},
+	
+		"no_axe_7": {
+		"name": "Sweat",
+		"text": "Yes.",
+		"next": "end",
+		"emotion": "talking",
+	},
+	
+	"07": {
+		"name": "Lumberjack",
+		"text": "If you say so.",
+		"next": "end",
+		"emotion": "talking",
+	},
+
+	"end": {
+		"trigger": "end"
+	}
+}

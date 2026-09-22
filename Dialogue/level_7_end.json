@@ -1,0 +1,308 @@
+{
+	"00": {
+		"name": "Narrator",
+		"text": "After defeating the golem and Sweat the door is now unguarded.",
+		"next": "sweat_killed_0",
+		"emotion": "talking",
+		"condition": "killed_sweat",
+		"condition_failed": "sour_killed_0"
+	},
+	
+	"sweat_killed_0": {
+		"name": "Sour",
+		"text": "It's time to complete your quest lumberer.",
+		"next": "sweat_killed_1",
+		"emotion": "talking",
+	},
+	
+	"sweat_killed_1": {
+		"name": "Lumberjack",
+		"text": "Aren't you a little bit sad that I just destroyed your friend.",
+		"next": "sweat_killed_2",
+		"emotion": "talking",
+	},
+	
+	"sweat_killed_2": {
+		"name": "Sour",
+		"text": "Don't worry. You just destroyed their physical shell. Once they regain enough power they'll be as good as new.",
+		"next": "sweat_killed_3",
+		"emotion": "talking",
+	},
+	
+	"sweat_killed_3": {
+		"name": "Narrator",
+		"text": "You walk over to the door and knock on it three times.",
+		"next": "sweat_killed_4",
+		"emotion": "talking",
+	},
+	
+	"sweat_killed_4": {
+		"name": "??????",
+		"text": "WHO DARES INTERUPT ME AS I SIT ON MY THRONE.",
+		"next": "sweat_killed_5",
+		"emotion": "talking",
+	},
+	
+	"sweat_killed_5": {
+		"name": "Lumberjack",
+		"text": "It is I lord Pasta. The humble lumberjack that you chose to undertake your most valiant quest.",
+		"next": "sweat_killed_6",
+		"emotion": "talking",
+	},
+	
+	"sweat_killed_6": {
+		"name": "Lord Pasta",
+		"text": "Ahh. The lumberjack. I have awaited your arrival for some time now. Thank you Sour for helping guide the lumberjack. I assume you were most helpful. However I do not see Sweat where are they?",
+		"next": "sweat_killed_7",
+		"emotion": "talking",
+		"condition": "killed_sweat",
+		"condition_failed": "dailog_0"
+	},
+	
+	"dailog_0": {
+		"name": "Lord Pasta",
+		"text": "Ahh. The lumberjack. I have awaited your arrival for some time now. Thank you Sweat for helping guide the lumberjack. I assume you were most helpful. However I do not see Sour where are they?",
+		"next": "sweat_killed_7",
+		"emotion": "talking",
+		"condition": "killed_sour",
+		"condition_failed": "dailog_1"
+	},
+	
+	"dailog_1": {
+		"name": "Lord Pasta",
+		"text": "Ahh. The lumberjack. I have awaited your arrival for some time now. Thank you Sweat and Sour for helping guide the lumberjack. I assume you were both most helpful. And I trust you still carry the relic lumberjack.",
+		"next": "sweat_killed_9",
+		"emotion": "talking",
+	},
+	
+	"sweat_killed_7": {
+		"name": "Lumberjack",
+		"text": "They.. uhhh. They had to attend to other business.",
+		"next": "sweat_killed_8",
+		"emotion": "talking",
+	},
+	
+	"sweat_killed_8": {
+		"name": "Lord Pasta",
+		"text": "Very well. I trust you still carry the relic.",
+		"next": "sweat_killed_9",
+		"emotion": "talking",
+	},
+	
+	"sweat_killed_9": {
+		"name": "Lumberjack",
+		"text": "I do my lord.",
+		"next": "sweat_killed_10",
+		"emotion": "talking",
+	},
+	
+	"sweat_killed_10": {
+		"name": "Lord Pasta",
+		"text": "Good. Now open it.",
+		"next": "sweat_killed_11",
+		"emotion": "talking",
+	},
+	
+	"sweat_killed_11": {
+		"name": "Narrator",
+		"text": "You place your hand on the lid of the chest. You can barely hold your anticipation as you open it.",
+		"next": "sweat_killed_12",
+		"emotion": "talking",
+		"effect": "chest"
+	},
+	
+	"sweat_killed_12": {
+		"name": "Narrator",
+		"text": "You stare into the open chest at the relic in disbalief.",
+		"next": "sweat_killed_13",
+		"emotion": "talking",
+		"effect": "chest"
+	},
+	
+	"sweat_killed_13": {
+		"name": "Narrator",
+		"text": "A roll of bogroll sits inside the chest.",
+		"next": "sweat_killed_14",
+		"emotion": "talking",
+		"effect": "paper"
+	},
+	
+	"sweat_killed_14": {
+		"name": "Narrator",
+		"text": "Before you have the time to process what your looking at the door in front of you opens revealing a stench you could not imagine in your worst nightmares and from this stench a large hand reaches out from the door and grabs the bogroll from the chest.",
+		"next": "sweat_killed_15",
+		"emotion": "talking",
+	},
+	
+	"sweat_killed_15": {
+		"name": "Lord Pasta",
+		"text": "I cannot thank you enough mortal. To think today was just a normal day before I felt the turtle poking it's head out the shell, let's just say it was touching cloth. Even a lord like myself must perform their duty from time to time but in my haste to perform this duty I forgot that I had not restocked my supply of bogroll and so I sent for you lumberjack to deliver to me this most sacred relic in my time of need and for that I am grateful.",
+		"next": "sweat_killed_16",
+		"emotion": "talking",
+		"effect": "paper"
+	},
+	
+	"sweat_killed_16": {
+		"name": "Lumberjack",
+		"text": "Uhh... don't mention it. I only helped cause I was told I would be rewared.",
+		"next": "sweat_killed_17",
+		"emotion": "talking",
+	},
+	
+	"sweat_killed_17": {
+		"name": "Lord Pasta",
+		"text": "Ah of course. I have the perfect reward for your performance.",
+		"next": "sweat_killed_18",
+		"emotion": "talking",
+	},
+	
+	"sweat_killed_18": {
+		"name": "Lord Pasta",
+		"text": "For you I gift this party hat. So that the party never ends.",
+		"next": "sweat_killed_21",
+		"emotion": "talking",
+		"condition": "big_prize",
+		"condition_failed": "sweat_killed_19",
+		"effect": "reward",
+	},
+	
+	"sweat_killed_19": {
+		"name": "Lord Pasta",
+		"text": "For you I gift this rune axe. So you can chop down any tree.",
+		"next": "sweat_killed_22",
+		"emotion": "talking",
+		"condition": "medium_prize",
+		"condition_failed": "sweat_killed_20",
+		"effect": "reward",
+	},
+	
+	"sweat_killed_20": {
+		"name": "Lord Pasta",
+		"text": "For you I gift this blue magicians hat. So you can look cool while casting spells or what not.",
+		"next": "sweat_killed_23",
+		"emotion": "talking",
+		"effect": "reward",
+	},
+	
+	"sweat_killed_21": {
+		"name": "Lumberjack",
+		"text": "Um... thanks I guess.",
+		"next": "sweat_killed_24",
+		"emotion": "talking",
+	},
+	
+	"sweat_killed_22": {
+		"name": "Lumberjack",
+		"text": "Nice. Always wanted one of those.",
+		"next": "sweat_killed_24",
+		"emotion": "talking",
+	},
+	
+	"sweat_killed_23": {
+		"name": "Lumberjack",
+		"text": "But I can't use magic.",
+		"next": "sweat_killed_24",
+		"emotion": "talking",
+	},
+	
+	"sweat_killed_24": {
+		"name": "Lord Pasta",
+		"text": "Now leave me lumberjack for I have important business to attend to.",
+		"next": "sweat_killed_25",
+		"emotion": "talking",
+		"effect": "reward",
+	},
+	
+	"sweat_killed_25": {
+		"name": "Narrator",
+		"text": "As you turn around you find yourself completely alone.",
+		"next": "sweat_killed_26",
+		"emotion": "talking",
+		"effect": "dissapear"
+	},
+	
+	"sweat_killed_26": {
+		"name": "Lumberjack",
+		"text": "Wait how am I suppost to get home?",
+		"next": "end",
+		"emotion": "talking",
+	},
+	
+	"sour_killed_0": {
+		"name": "Narrator",
+		"text": "After defeating the golem and Sour the door is now unguarded.",
+		"next": "sour_killed_1",
+		"emotion": "talking",
+		"condition": "killed_sour",
+		"condition_failed": "golem_killed_0"
+	},
+	
+	"sour_killed_1": {
+		"name": "Sweat",
+		"text": "It's time mortal complete the quest.",
+		"next": "sour_killed_2",
+		"emotion": "talking",
+	},
+	
+	"sour_killed_2": {
+		"name": "Lumberjack",
+		"text": "Aren't you a little bit sad that I just destroyed your friend.",
+		"next": "sour_killed_3",
+		"emotion": "talking",
+	},
+	
+	"sour_killed_3": {
+		"name": "Sweat",
+		"text": "Don't worry. You just destroyed their physical shell. Once they regain enough power they'll be as good as new.",
+		"next": "sweat_killed_3",
+		"emotion": "talking",
+	},
+	
+	"golem_killed_0": {
+		"name": "Narrator",
+		"text": "After defeating the golem the door is now unguarded.",
+		"next": "golem_killed_1",
+		"emotion": "talking",
+		"condition": "killed_golem",
+		"condition_failed": "01"
+	},
+	
+	"golem_killed_1": {
+		"name": "Sour",
+		"text": "This is it lumberer.",
+		"next": "golem_killed_2",
+		"emotion": "talking",
+	},
+	
+	"golem_killed_2": {
+		"name": "Sweat",
+		"text": "Complete this quest.",
+		"next": "sweat_killed_3",
+		"emotion": "talking",
+	},
+	
+	"01": {
+		"name": "Narrator",
+		"text": "The door is now unguarded.",
+		"next": "02",
+		"emotion": "talking",
+	},
+	
+	"02": {
+		"name": "Sour",
+		"text": "This is it lumberer.",
+		"next": "03",
+		"emotion": "talking",
+	},
+	
+	"03": {
+		"name": "Sweat",
+		"text": "Complete this quest.",
+		"next": "sweat_killed_3",
+		"emotion": "talking",
+	},
+	
+	"end": {
+		"trigger": "end"
+	}
+}

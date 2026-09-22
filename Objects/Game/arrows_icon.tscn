@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://dj7f8aak30i88"]
+
+[ext_resource type="Texture2D" uid="uid://gpns41l0r3le" path="res://Textures/Arrows.png" id="1_d88fu"]
+[ext_resource type="Script" uid="uid://cb3pyja14ixs5" path="res://Scripts/Game/arrows_icon.gd" id="2_d88fu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d88fu"]
+size = Vector2(200, 93.3333)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fmf8b"]
+size = Vector2(203.333, 163.333)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d3155"]
+size = Vector2(203.333, 223.333)
+
+[node name="ArrowsIcon" type="Sprite2D"]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_d88fu")
+hframes = 4
+vframes = 3
+script = ExtResource("2_d88fu")
+pressed_frame = 2
+
+[node name="PerfectArea" type="Area2D" parent="."]
+
+[node name="PerfectCollisionShape" type="CollisionShape2D" parent="PerfectArea"]
+position = Vector2(-16.6667, -3.97364e-07)
+shape = SubResource("RectangleShape2D_d88fu")
+
+[node name="GoodArea" type="Area2D" parent="."]
+
+[node name="GoodCollisionShape" type="CollisionShape2D" parent="GoodArea"]
+position = Vector2(-15, -5)
+shape = SubResource("RectangleShape2D_fmf8b")
+
+[node name="OkayArea" type="Area2D" parent="."]
+
+[node name="OkayCollisionShape" type="CollisionShape2D" parent="OkayArea"]
+position = Vector2(-15, -5)
+shape = SubResource("RectangleShape2D_d3155")
+
+[connection signal="area_entered" from="PerfectArea" to="." method="_on_perfect_area_area_entered"]
+[connection signal="area_exited" from="PerfectArea" to="." method="_on_perfect_area_area_exited"]
+[connection signal="area_entered" from="GoodArea" to="." method="_on_good_area_area_entered"]
+[connection signal="area_exited" from="GoodArea" to="." method="_on_good_area_area_exited"]
+[connection signal="area_entered" from="OkayArea" to="." method="_on_okay_area_area_entered"]
+[connection signal="area_exited" from="OkayArea" to="." method="_on_okay_area_area_exited"]

@@ -1,0 +1,132 @@
+[gd_scene load_steps=6 format=3 uid="uid://c417b5g6m5xyw"]
+
+[ext_resource type="Script" uid="uid://gtwhdfxxjt8m" path="res://Scripts/Levels/end_scene.gd" id="1_o5ats"]
+[ext_resource type="Texture2D" uid="uid://g3igdabt8qph" path="res://Textures/MainMenu.png" id="1_xa5pf"]
+[ext_resource type="Texture2D" uid="uid://bmxypqldyl4pm" path="res://Textures/UI.png" id="2_o5ats"]
+[ext_resource type="Theme" uid="uid://dd7vnve77hcbm" path="res://Textures/Theme/Main_theme.tres" id="3_uvgcc"]
+[ext_resource type="PackedScene" uid="uid://c0bchh4dqplp7" path="res://Animations/Fade_Transition.tscn" id="5_uvgcc"]
+
+[node name="EndScene" type="Node2D"]
+script = ExtResource("1_o5ats")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(640, 360)
+texture = ExtResource("1_xa5pf")
+
+[node name="ScoreBackground" type="NinePatchRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 434.0
+offset_top = 87.0
+offset_right = 896.0
+offset_bottom = 633.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_o5ats")
+region_rect = Rect2(384.218, 0, 128, 128)
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="ScoreBackground2" type="NinePatchRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 455.0
+offset_top = 108.0
+offset_right = 880.0
+offset_bottom = 614.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_o5ats")
+region_rect = Rect2(0.0804024, 0, 128.038, 128)
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="EndLabel" type="Label" parent="."]
+offset_left = 444.84
+offset_top = 49.54
+offset_right = 878.84
+offset_bottom = 217.54
+theme = ExtResource("3_uvgcc")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 120
+text = "The End"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextContainer" type="Node2D" parent="."]
+position = Vector2(640, 383.32)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -156.55
+offset_top = -173.0
+offset_right = 208.45
+offset_bottom = 173.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="Score" type="Label" parent="TextContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_uvgcc")
+theme_override_font_sizes/font_size = 46
+text = "Total Score: 10000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MaxCombo" type="Label" parent="TextContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_uvgcc")
+theme_override_font_sizes/font_size = 46
+text = "Highest Combo: 37"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SweatChoices" type="Label" parent="TextContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_uvgcc")
+theme_override_font_sizes/font_size = 46
+text = "Sweat Choices: 3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SourChoices" type="Label" parent="TextContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_uvgcc")
+theme_override_font_sizes/font_size = 46
+text = "Sour Choices: 3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayAgainButton" type="Button" parent="."]
+offset_left = 520.0
+offset_top = 576.0
+offset_right = 820.0
+offset_bottom = 636.0
+theme = ExtResource("3_uvgcc")
+theme_override_font_sizes/font_size = 36
+text = "Play Again"
+
+[node name="Fade_Trans" parent="." instance=ExtResource("5_uvgcc")]
+visible = false
+
+[node name="FadeTimer" type="Timer" parent="Fade_Trans"]
+one_shot = true
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="pressed" from="PlayAgainButton" to="." method="_on_button_pressed"]
+[connection signal="timeout" from="Fade_Trans/FadeTimer" to="." method="_on_fade_timer_timeout"]

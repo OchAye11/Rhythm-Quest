@@ -1,0 +1,18 @@
+{
+	"00": {
+		"name": "Sweat",
+		"text": "The narrator is now speaking and the json file works as intended",
+		"next": "04"
+	},
+
+	"04": {
+		"name": "Sour",
+		"text": "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
+		"next": "end",
+		"emotion": "happy"
+	},
+
+	"end": {
+		"trigger": "end"
+	}
+}

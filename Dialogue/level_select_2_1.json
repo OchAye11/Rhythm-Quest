@@ -1,0 +1,51 @@
+{
+	"00": {
+		"name": "Sweat",
+		"text": "Well I think we know from now on never to take directions from Sour again.",
+		"next": "01",
+		"emotion": "talking",
+	},
+
+	"01": {
+		"name": "Sour",
+		"text": "Ah come on. Stop being such a winy baby, we found our way eventually.",
+		"next": "02",
+		"emotion": "talking",
+	},
+
+	"02": {
+		"name": "Sweat",
+		"text": "We would have found our way faster if we went right instead.",
+		"next": "03",
+		"emotion": "angry",
+	},
+
+	"03": {
+		"name": "Lumberjack",
+		"text": "Come on stop arguing. Your doing my head in.",
+		"next": "04",
+		"emotion": "talking",
+	},
+
+	"04": {
+		"name": "Sweat",
+		"text": "...",
+		"next": "05",
+	},
+	
+	"05": {
+		"name": "Sour",
+		"text": "...",
+		"next": "06",
+	},
+	
+	"06": {
+		"name": "Narrator",
+		"text": "The edge of the forest comes into sight as your group continues to march forward.",
+		"next": "end",
+	},
+	
+	"end": {
+		"trigger": "end"
+	}
+}

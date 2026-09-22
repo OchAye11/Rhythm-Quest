@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqgpiqgcq5v1s"]
+
+[ext_resource type="Texture2D" uid="uid://dx5hyehj75qdf" path="res://Textures/ArrowButtons.png" id="1_87vdl"]
+[ext_resource type="Script" uid="uid://8edu0yh1q4n4" path="res://Scripts/LevelSelect/scroll_arrows.gd" id="2_i557i"]
+
+[node name="ScrollArrows" type="Sprite2D"]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_87vdl")
+hframes = 3
+script = ExtResource("2_i557i")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(2.5, -90, -117.5, -12.5, -92.5, 7.5, -62.5, -2.5, -60, 87.5, 55, 90, 60, -2.5, 90, 7.5, 117.5, -12.5)
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

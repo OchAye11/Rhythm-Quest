@@ -1,0 +1,98 @@
+[gd_scene load_steps=11 format=3 uid="uid://c20xh0mb6p26v"]
+
+[ext_resource type="Script" uid="uid://c4t5e4xxtyu4b" path="res://Scripts/Levels/level_1.gd" id="1_0urlm"]
+[ext_resource type="Texture2D" uid="uid://bchj0fuuve5e4" path="res://Textures/Forest.png" id="2_77x7w"]
+[ext_resource type="Texture2D" uid="uid://bnkvw4v880rjl" path="res://Textures/Tree.png" id="3_xoyoh"]
+[ext_resource type="PackedScene" uid="uid://c8uvv8xg2iqrg" path="res://Objects/Audio/conductor.tscn" id="4_f4pg2"]
+[ext_resource type="PackedScene" uid="uid://dytpi2jk4eaeo" path="res://Objects/dialogue_player.tscn" id="5_62b6n"]
+[ext_resource type="PackedScene" uid="uid://dqtdkk6vl2bd6" path="res://Animations/light_up.tscn" id="5_77x7w"]
+[ext_resource type="AudioStream" uid="uid://b6jruaj630q04" path="res://Music/ForestSong.wav" id="5_f4pg2"]
+[ext_resource type="Texture2D" uid="uid://hhw57faj33s4" path="res://Textures/Items.png" id="5_xoyoh"]
+[ext_resource type="PackedScene" uid="uid://osrcbqlysjig" path="res://Objects/Game/scoreboard.tscn" id="6_rs4xw"]
+[ext_resource type="PackedScene" uid="uid://prxf2p3eq74j" path="res://Objects/LevelSelect/pause_menu.tscn" id="7_lk57d"]
+
+[node name="level_1" type="Node2D"]
+script = ExtResource("1_0urlm")
+
+[node name="Environment" type="Node2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="Environment"]
+position = Vector2(640, 360)
+texture = ExtResource("2_77x7w")
+
+[node name="TreeBranch" type="Sprite2D" parent="Environment"]
+position = Vector2(626, 357.5)
+scale = Vector2(1, 0.514648)
+texture = ExtResource("3_xoyoh")
+hframes = 2
+
+[node name="TreeLeaves" type="Sprite2D" parent="Environment"]
+position = Vector2(638, 155)
+rotation = -1.5708
+scale = Vector2(0.630682, 0.618963)
+texture = ExtResource("3_xoyoh")
+hframes = 2
+frame = 1
+
+[node name="LabelHolder" type="Node2D" parent="."]
+position = Vector2(81, 67)
+
+[node name="Score" type="Label" parent="LabelHolder"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+offset_right = 56.0
+grow_vertical = 0
+text = "Score: "
+
+[node name="Combo" type="Label" parent="LabelHolder"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Conductor" parent="." instance=ExtResource("4_f4pg2")]
+stream = ExtResource("5_f4pg2")
+
+[node name="Chest" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(640, 324)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("5_xoyoh")
+hframes = 5
+vframes = 2
+
+[node name="ColorRect" parent="." instance=ExtResource("5_77x7w")]
+process_mode = 2
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="DialoguePlayer" parent="." instance=ExtResource("5_62b6n")]
+dialogue_file = "res://Dialogue/level_1_start.json"
+
+[node name="Scoreboard" parent="." instance=ExtResource("6_rs4xw")]
+visible = false
+
+[node name="PauseMenu" parent="." instance=ExtResource("7_lk57d")]
+visible = false
+
+[node name="TimerContainer" type="Node2D" parent="."]
+
+[node name="EndTimer" type="Timer" parent="TimerContainer"]
+wait_time = 4.0
+one_shot = true
+
+[node name="DialogueTimer" type="Timer" parent="TimerContainer"]
+wait_time = 2.0
+one_shot = true
+
+[node name="ChestTimer" type="Timer" parent="TimerContainer"]
+process_mode = 3
+one_shot = true
+
+[connection signal="beat" from="Conductor" to="." method="_on_conductor_beat"]
+[connection signal="measured" from="Conductor" to="." method="_on_conductor_measured"]
+[connection signal="timeout" from="TimerContainer/EndTimer" to="." method="_on_end_timer_timeout"]
+[connection signal="timeout" from="TimerContainer/DialogueTimer" to="." method="_on_dialogue_timer_timeout"]
+[connection signal="timeout" from="TimerContainer/ChestTimer" to="." method="_on_chest_timer_timeout"]

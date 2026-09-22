@@ -1,0 +1,128 @@
+[gd_scene load_steps=13 format=3 uid="uid://bol5ggkn8jgoi"]
+
+[ext_resource type="Script" uid="uid://bvemel35spq87" path="res://Scripts/Levels/level_5.gd" id="1_rpnhq"]
+[ext_resource type="Texture2D" uid="uid://gsfn7dhcm50a" path="res://Textures/Mountain.png" id="2_rpnhq"]
+[ext_resource type="Texture2D" uid="uid://cd768egwc1owg" path="res://Textures/Badges.png" id="3_ki7po"]
+[ext_resource type="Texture2D" uid="uid://io4nj6g1g561" path="res://Textures/Burger.png" id="3_rpnhq"]
+[ext_resource type="PackedScene" uid="uid://cphoyc0ohdme" path="res://Objects/Game/damage_negation_icon.tscn" id="4_u0s3x"]
+[ext_resource type="PackedScene" uid="uid://dj7f8aak30i88" path="res://Objects/Game/arrows_icon.tscn" id="5_xagau"]
+[ext_resource type="PackedScene" uid="uid://c8uvv8xg2iqrg" path="res://Objects/Audio/conductor.tscn" id="6_ytgun"]
+[ext_resource type="PackedScene" uid="uid://dytpi2jk4eaeo" path="res://Objects/dialogue_player.tscn" id="7_rpnhq"]
+[ext_resource type="PackedScene" uid="uid://osrcbqlysjig" path="res://Objects/Game/scoreboard.tscn" id="8_hu0ol"]
+[ext_resource type="PackedScene" uid="uid://x520mf8shd3o" path="res://Objects/choices_layer.tscn" id="8_m47b0"]
+[ext_resource type="AudioStream" uid="uid://bkvn8qlu3p3ly" path="res://Music/FightSong.wav" id="8_x7gsr"]
+[ext_resource type="PackedScene" uid="uid://prxf2p3eq74j" path="res://Objects/LevelSelect/pause_menu.tscn" id="9_m47b0"]
+
+[node name="level_5" type="Node2D"]
+script = ExtResource("1_rpnhq")
+
+[node name="Environment" type="Node2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="Environment"]
+position = Vector2(640, 360)
+texture = ExtResource("2_rpnhq")
+
+[node name="Enemy" type="Sprite2D" parent="Environment"]
+process_mode = 3
+position = Vector2(640, 310)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_rpnhq")
+
+[node name="EnemyDamage" type="Sprite2D" parent="Environment"]
+position = Vector2(794, 235)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_ki7po")
+hframes = 3
+vframes = 2
+frame = 4
+
+[node name="LabelHolder" type="Node2D" parent="."]
+position = Vector2(81, 67)
+
+[node name="Score" type="Label" parent="LabelHolder"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+offset_right = 56.0
+grow_vertical = 0
+text = "Score: "
+
+[node name="Combo" type="Label" parent="LabelHolder"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Mellee_Damage_Negation_Icon" parent="." instance=ExtResource("4_u0s3x")]
+position = Vector2(1204, 230.36)
+frame = 2
+negation_type = "Mellee"
+
+[node name="Range_Damage_Negation_Icon2" parent="." instance=ExtResource("4_u0s3x")]
+position = Vector2(1202, 78)
+frame = 1
+negation_type = "Range"
+
+[node name="Magic_Damage_Negation_Icon3" parent="." instance=ExtResource("4_u0s3x")]
+position = Vector2(1206, 382)
+negation_type = "Magic"
+
+[node name="ArrowLeft" parent="." instance=ExtResource("5_xagau")]
+position = Vector2(321.8, 610)
+frame = 5
+button_input = "Left"
+base_frame = 5
+pressed_frame = 7
+
+[node name="ArrowUp" parent="." instance=ExtResource("5_xagau")]
+position = Vector2(505.8, 610)
+frame = 4
+button_input = "Up"
+base_frame = 4
+pressed_frame = 6
+
+[node name="ArrowDown" parent="." instance=ExtResource("5_xagau")]
+position = Vector2(707.9, 610)
+scale = Vector2(0.300391, 0.300391)
+frame = 1
+button_input = "Down"
+base_frame = 1
+pressed_frame = 3
+
+[node name="ArrowRight" parent="." instance=ExtResource("5_xagau")]
+position = Vector2(923.8, 610)
+button_input = "Right"
+
+[node name="Conductor" parent="." instance=ExtResource("6_ytgun")]
+stream = ExtResource("8_x7gsr")
+
+[node name="Choices_Layer" parent="." instance=ExtResource("8_m47b0")]
+visible = false
+
+[node name="DialoguePlayer" parent="." node_paths=PackedStringArray("choices_layer") instance=ExtResource("7_rpnhq")]
+dialogue_file = "res://Dialogue/level_5_start.json"
+choices_layer = NodePath("../Choices_Layer")
+
+[node name="Scoreboard" parent="." instance=ExtResource("8_hu0ol")]
+visible = false
+
+[node name="PauseMenu" parent="." instance=ExtResource("9_m47b0")]
+visible = false
+
+[node name="Timers" type="Node2D" parent="."]
+
+[node name="EndTimer" type="Timer" parent="Timers"]
+wait_time = 5.0
+one_shot = true
+
+[node name="DestroyTimer" type="Timer" parent="Timers"]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="negation_pressed" from="Mellee_Damage_Negation_Icon" to="." method="_on_mellee_damage_negation_icon_negation_pressed"]
+[connection signal="negation_pressed" from="Range_Damage_Negation_Icon2" to="." method="_on_range_damage_negation_icon_2_negation_pressed"]
+[connection signal="negation_pressed" from="Magic_Damage_Negation_Icon3" to="." method="_on_magic_damage_negation_icon_3_negation_pressed"]
+[connection signal="beat" from="Conductor" to="." method="_on_conductor_beat"]
+[connection signal="measured" from="Conductor" to="." method="_on_conductor_measured"]
+[connection signal="timeout" from="Timers/EndTimer" to="." method="_on_end_timer_timeout"]
+[connection signal="timeout" from="Timers/DestroyTimer" to="." method="_on_destroy_timer_timeout"]

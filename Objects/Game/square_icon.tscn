@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://dgwocmmccqjkj"]
+
+[ext_resource type="Script" uid="uid://c76qa8hb72xdq" path="res://Scripts/Game/square_icon.gd" id="1_bvo53"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bvo53"]
+size = Vector2(21, 76)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w4j1e"]
+size = Vector2(40, 80)
+
+[node name="square_icon" type="ColorRect"]
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+offset_bottom = 40.0
+color = Color(0.784314, 0.188235, 0.180392, 1)
+script = ExtResource("1_bvo53")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -18.0
+offset_top = -38.0
+offset_right = 18.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.384314, 0.372549, 1)
+
+[node name="PerfectArea2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PerfectArea2D"]
+position = Vector2(19.5, 40)
+shape = SubResource("RectangleShape2D_bvo53")
+
+[node name="GoodArea2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GoodArea2D"]
+position = Vector2(20, 40)
+shape = SubResource("RectangleShape2D_w4j1e")
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="area_entered" from="PerfectArea2D" to="." method="_on_perfect_area_2d_area_entered"]
+[connection signal="area_exited" from="PerfectArea2D" to="." method="_on_perfect_area_2d_area_exited"]
+[connection signal="area_entered" from="GoodArea2D" to="." method="_on_good_area_2d_area_entered"]
+[connection signal="area_exited" from="GoodArea2D" to="." method="_on_good_area_2d_area_exited"]

@@ -1,0 +1,83 @@
+[gd_scene load_steps=8 format=3 uid="uid://cy1yre80543me"]
+
+[ext_resource type="PackedScene" uid="uid://cb0khn5vxai84" path="res://Objects/LevelSelect/LevelIcon.tscn" id="1_f8gdk"]
+[ext_resource type="Script" uid="uid://bartkwo6koexe" path="res://Scripts/LevelSelect/level_select.gd" id="1_ivc11"]
+[ext_resource type="Texture2D" uid="uid://yodlv46jc28d" path="res://Textures/Map.png" id="2_2k8hk"]
+[ext_resource type="PackedScene" uid="uid://c0bchh4dqplp7" path="res://Animations/Fade_Transition.tscn" id="2_02mus"]
+[ext_resource type="PackedScene" uid="uid://dqgpiqgcq5v1s" path="res://Objects/LevelSelect/scroll_arrows.tscn" id="5_5sbjc"]
+[ext_resource type="PackedScene" uid="uid://prxf2p3eq74j" path="res://Objects/LevelSelect/pause_menu.tscn" id="5_e5ipk"]
+[ext_resource type="PackedScene" uid="uid://dytpi2jk4eaeo" path="res://Objects/dialogue_player.tscn" id="7_e5ipk"]
+
+[node name="LevelSelect" type="Node2D"]
+script = ExtResource("1_ivc11")
+
+[node name="Container" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Container"]
+position = Vector2(643, 0)
+texture = ExtResource("2_2k8hk")
+
+[node name="LevelContainer" type="Node2D" parent="Container"]
+
+[node name="Level1" parent="Container/LevelContainer" instance=ExtResource("1_f8gdk")]
+position = Vector2(685, 625)
+level = "level_1"
+
+[node name="Level2_1" parent="Container/LevelContainer" instance=ExtResource("1_f8gdk")]
+position = Vector2(538, 478)
+level = "level2_1"
+
+[node name="Level2_2" parent="Container/LevelContainer" instance=ExtResource("1_f8gdk")]
+position = Vector2(962, 478)
+level = "level2_2"
+
+[node name="Level3" parent="Container/LevelContainer" instance=ExtResource("1_f8gdk")]
+position = Vector2(841, 309)
+level = "level_3"
+
+[node name="Level4_1" parent="Container/LevelContainer" instance=ExtResource("1_f8gdk")]
+position = Vector2(390, 145)
+level = "level4_1"
+
+[node name="Level4_2" parent="Container/LevelContainer" instance=ExtResource("1_f8gdk")]
+position = Vector2(964, 145)
+level = "level4_2"
+
+[node name="Level5" parent="Container/LevelContainer" instance=ExtResource("1_f8gdk")]
+position = Vector2(509, -58)
+level = "level_5"
+
+[node name="Level6_1" parent="Container/LevelContainer" instance=ExtResource("1_f8gdk")]
+position = Vector2(318, -266)
+level = "level6_1"
+
+[node name="Level6_2" parent="Container/LevelContainer" instance=ExtResource("1_f8gdk")]
+position = Vector2(838, -266)
+level = "level6_2"
+
+[node name="Level7" parent="Container/LevelContainer" instance=ExtResource("1_f8gdk")]
+position = Vector2(650, -400)
+level = "level_7"
+
+[node name="ScrollArrowUp" parent="." instance=ExtResource("5_5sbjc")]
+position = Vector2(1198.2, 483.2)
+direction = "up"
+
+[node name="ScrollArrowDown" parent="." instance=ExtResource("5_5sbjc")]
+position = Vector2(1198.2, 563.2)
+rotation = -3.14159
+direction = "down"
+
+[node name="DialoguePlayer" parent="." instance=ExtResource("7_e5ipk")]
+dialogue_file = "res://Dialogue/level_select_1.json"
+
+[node name="PauseMenu" parent="." instance=ExtResource("5_e5ipk")]
+visible = false
+
+[node name="Fade_Trans" parent="." instance=ExtResource("2_02mus")]
+process_mode = 3
+visible = false
+
+[node name="Timer" type="Timer" parent="Fade_Trans"]
+
+[connection signal="timeout" from="Fade_Trans/Timer" to="." method="_on_timer_timeout"]

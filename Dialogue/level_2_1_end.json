@@ -1,0 +1,39 @@
+{
+	"00": {
+		"name": "Lumberjack",
+		"text": "Finally We've found the right path now.",
+		"next": "01"
+	},
+
+	"01": {
+		"name": "Sweat",
+		"text": "No thanks to you lot.",
+		"next": "02",
+		"emotion": "talking",
+	},
+
+	"02": {
+		"name": "Sour",
+		"text": "Still a better way than going right. Am I right.",
+		"next": "03",
+		"emotion": "talking",
+	},
+
+	"03": {
+		"name": "Sweat",
+		"text": "............",
+		"next": "04",
+		"emotion": "indifferent",
+	},
+
+	"04": {
+		"name": "Sweat",
+		"text": "Let's just keep going.",
+		"next": "end",
+		"emotion": "talking",
+	},
+	
+	"end": {
+		"trigger": "end"
+	}
+}

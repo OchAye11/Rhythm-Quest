@@ -1,0 +1,170 @@
+[gd_scene load_steps=16 format=3 uid="uid://b344x6toq2fkp"]
+
+[ext_resource type="Script" uid="uid://dlk1wm6dg1yld" path="res://Scripts/Levels/level_3.gd" id="1_trpa2"]
+[ext_resource type="Texture2D" uid="uid://bchj0fuuve5e4" path="res://Textures/Forest.png" id="2_4t7ew"]
+[ext_resource type="Texture2D" uid="uid://bnkvw4v880rjl" path="res://Textures/Tree.png" id="3_oojpf"]
+[ext_resource type="Texture2D" uid="uid://hhw57faj33s4" path="res://Textures/Items.png" id="4_7cdb2"]
+[ext_resource type="Texture2D" uid="uid://cd768egwc1owg" path="res://Textures/Badges.png" id="4_oojpf"]
+[ext_resource type="PackedScene" uid="uid://dj7f8aak30i88" path="res://Objects/Game/arrows_icon.tscn" id="5_2urlj"]
+[ext_resource type="Texture2D" uid="uid://dx5hyehj75qdf" path="res://Textures/ArrowButtons.png" id="5_7cdb2"]
+[ext_resource type="PackedScene" uid="uid://c8uvv8xg2iqrg" path="res://Objects/Audio/conductor.tscn" id="6_88iqf"]
+[ext_resource type="PackedScene" uid="uid://cphoyc0ohdme" path="res://Objects/Game/damage_negation_icon.tscn" id="7_5wr1k"]
+[ext_resource type="PackedScene" uid="uid://dqtdkk6vl2bd6" path="res://Animations/light_up.tscn" id="8_4t7ew"]
+[ext_resource type="PackedScene" uid="uid://osrcbqlysjig" path="res://Objects/Game/scoreboard.tscn" id="8_wtqdv"]
+[ext_resource type="PackedScene" uid="uid://dytpi2jk4eaeo" path="res://Objects/dialogue_player.tscn" id="9_1yi2b"]
+[ext_resource type="AudioStream" uid="uid://bkvn8qlu3p3ly" path="res://Music/FightSong.wav" id="9_88iqf"]
+[ext_resource type="PackedScene" uid="uid://prxf2p3eq74j" path="res://Objects/LevelSelect/pause_menu.tscn" id="10_462h2"]
+[ext_resource type="PackedScene" uid="uid://x520mf8shd3o" path="res://Objects/choices_layer.tscn" id="10_oojpf"]
+
+[node name="level_3" type="Node2D"]
+script = ExtResource("1_trpa2")
+
+[node name="Environment" type="Node2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="Environment"]
+position = Vector2(640, 360)
+texture = ExtResource("2_4t7ew")
+
+[node name="TreeBranch" type="Sprite2D" parent="Environment"]
+position = Vector2(626, 350)
+scale = Vector2(1, 0.5)
+texture = ExtResource("3_oojpf")
+hframes = 2
+
+[node name="TreeLeaves" type="Sprite2D" parent="Environment"]
+position = Vector2(638, 155)
+rotation = -1.5708
+scale = Vector2(0.630682, 0.618963)
+texture = ExtResource("3_oojpf")
+hframes = 2
+frame = 1
+
+[node name="EnemyDamage" type="Sprite2D" parent="Environment"]
+position = Vector2(805, 290)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_oojpf")
+hframes = 3
+vframes = 2
+frame = 4
+
+[node name="PointingArrow" type="Sprite2D" parent="Environment"]
+visible = false
+position = Vector2(684, 344)
+rotation = 1.03149
+scale = Vector2(0.4, 0.752448)
+texture = ExtResource("5_7cdb2")
+hframes = 3
+
+[node name="Axe" type="Sprite2D" parent="Environment"]
+visible = false
+position = Vector2(640, 320)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_7cdb2")
+hframes = 5
+vframes = 2
+frame = 1
+
+[node name="ArrowLeft" parent="." instance=ExtResource("5_2urlj")]
+position = Vector2(321.8, 610)
+frame = 5
+button_input = "Left"
+base_frame = 5
+pressed_frame = 7
+
+[node name="ArrowUp" parent="." instance=ExtResource("5_2urlj")]
+position = Vector2(505.8, 610)
+frame = 4
+button_input = "Up"
+base_frame = 4
+pressed_frame = 6
+
+[node name="ArrowDown" parent="." instance=ExtResource("5_2urlj")]
+position = Vector2(707.9, 610)
+scale = Vector2(0.300391, 0.300391)
+frame = 1
+button_input = "Down"
+base_frame = 1
+pressed_frame = 3
+
+[node name="ArrowRight" parent="." instance=ExtResource("5_2urlj")]
+position = Vector2(923.8, 610)
+button_input = "Right"
+
+[node name="Conductor" parent="." instance=ExtResource("6_88iqf")]
+stream = ExtResource("9_88iqf")
+
+[node name="Range_Negation_Icon" parent="." instance=ExtResource("7_5wr1k")]
+position = Vector2(1195, 86)
+frame = 1
+negation_type = "Range"
+
+[node name="Mellee_Negation_Icon" parent="." instance=ExtResource("7_5wr1k")]
+position = Vector2(1197, 242)
+frame = 2
+negation_type = "Mellee"
+
+[node name="LabelHolder" type="Node2D" parent="."]
+position = Vector2(81, 67)
+
+[node name="Score" type="Label" parent="LabelHolder"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+offset_right = 56.0
+grow_vertical = 0
+text = "Score: "
+
+[node name="Combo" type="Label" parent="LabelHolder"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="ColorRect" parent="." instance=ExtResource("8_4t7ew")]
+process_mode = 2
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 1279.0
+offset_bottom = 719.0
+
+[node name="Scoreboard" parent="." instance=ExtResource("8_wtqdv")]
+visible = false
+
+[node name="Choices_Layer" parent="." instance=ExtResource("10_oojpf")]
+visible = false
+
+[node name="DialoguePlayer" parent="." node_paths=PackedStringArray("choices_layer") instance=ExtResource("9_1yi2b")]
+offset = Vector2(0, 49.955)
+transform = Transform2D(1, 0, 0, 1, 0, 49.955)
+dialogue_file = "res://Dialogue/level_3_start.json"
+choices_layer = NodePath("../Choices_Layer")
+
+[node name="PauseMenu" parent="." instance=ExtResource("10_462h2")]
+visible = false
+
+[node name="Timers" type="Node2D" parent="."]
+
+[node name="EndTimer" type="Timer" parent="Timers"]
+wait_time = 5.0
+one_shot = true
+
+[node name="DialogueTimer" type="Timer" parent="Timers"]
+wait_time = 0.5
+one_shot = true
+
+[node name="AxeTimer" type="Timer" parent="Timers"]
+process_mode = 2
+one_shot = true
+
+[node name="DestroyTimer" type="Timer" parent="Timers"]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="beat" from="Conductor" to="." method="_on_conductor_beat"]
+[connection signal="measured" from="Conductor" to="." method="_on_conductor_measured"]
+[connection signal="negation_pressed" from="Range_Negation_Icon" to="." method="_on_range_negation_icon_negation_pressed"]
+[connection signal="negation_pressed" from="Mellee_Negation_Icon" to="." method="_on_mellee_negation_icon_negation_pressed"]
+[connection signal="timeout" from="Timers/EndTimer" to="." method="_on_end_timer_timeout"]
+[connection signal="timeout" from="Timers/DialogueTimer" to="." method="_on_dialogue_timer_timeout"]
+[connection signal="timeout" from="Timers/AxeTimer" to="." method="_on_axe_timer_timeout"]
+[connection signal="timeout" from="Timers/DestroyTimer" to="." method="_on_destroy_timer_timeout"]

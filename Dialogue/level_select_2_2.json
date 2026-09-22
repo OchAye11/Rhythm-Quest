@@ -1,0 +1,38 @@
+{
+	"00": {
+		"name": "Lumberjack",
+		"text": "Huph. Huph. guys wait up. Stop walking so fast.",
+		"next": "01",
+	},
+
+	"01": {
+		"name": "Sweat",
+		"text": "No dilly dallying mortal, lord Pasta awaits.",
+		"next": "02",
+		"emotion": "talking",
+	},
+
+	"02": {
+		"name": "Sour",
+		"text": "Remember this pain lumberer next time you side with Sweat.",
+		"next": "03",
+		"emotion": "talking",
+	},
+
+	"03": {
+		"name": "Lumberjack",
+		"text": "Huph. Wheeze. Gasp.",
+		"next": "04",
+		"emotion": "talking",
+	},
+
+	"04": {
+		"name": "Narrator",
+		"text": "The edge of the forest comes into sight as your group continues to march forward.",
+		"next": "end",
+	},
+	
+	"end": {
+		"trigger": "end"
+	}
+}

@@ -1,0 +1,315 @@
+{
+	"00": {
+		"name": "Sour",
+		"text": "I can't believe you gave up your axe.",
+		"next": "drop_1",
+		"emotion": "angry",
+		"condition": "dropped_axe",
+		"condition_failed": "fight_0"
+	},
+
+	"drop_1": {
+		"name": "Sweat",
+		"text": "It was the right thing to do.",
+		"next": "drop_2",
+		"emotion": "talking",
+	},
+	
+	"drop_2": {
+		"name": "Sour",
+		"text": "But it made us look like pushovers.",
+		"next": "drop_3",
+		"emotion": "talking",
+	},
+	
+	"drop_3": {
+		"name": "Sweat",
+		"text": "That doesn't matter. Only the quest matters.",
+		"next": "drop_4",
+		"emotion": "talking",
+	},
+	
+		"drop_4": {
+		"name": "Lumberjack",
+		"text": "Look. It was my choice to give up my axe. I don't know why your so upset.",
+		"next": "drop_5",
+		"emotion": "talking",
+	},
+
+	"drop_5": {
+		"name": "Sour",
+		"text": "I'm upset because your choices just seem to be whatever Sweat tells you to do.",
+		"next": "drop_6",
+		"emotion": "talking",
+	},
+
+	"drop_6": {
+		"name": "Sweat",
+		"text": "Following my guidance isn't a bad trait to have.",
+		"next": "drop_7",
+		"emotion": "talking",
+	},
+	
+		"drop_7": {
+		"name": "Sour",
+		"text": "It is when your guidance is terrible.",
+		"next": "drop_8",
+		"emotion": "talking",
+	},
+	
+		"drop_8": {
+		"name": "Lumberjack",
+		"text": "If I knew this quest had so much squabbling in it I would have never accepted it. Oh wait, I didn't get a choice.",
+		"next": "drop_9",
+		"emotion": "talking",
+	},
+	
+		"drop_9": {
+		"name": "Sour",
+		"text": "Don't give us backchat lumberer. Most people would give anything up to recieve a quest from lord Pasta.",
+		"next": "drop_10",
+		"emotion": "talking",
+	},
+	
+		"drop_10": {
+		"name": "Sweat",
+		"text": "You should count yourself lucky mortal. And try to appreciate how lucky you are before deciding to talk back to us.",
+		"next": "drop_11",
+		"emotion": "talking",
+	},
+	
+		"drop_11": {
+		"name": "Lumberjack",
+		"text": "Don't feel too lucky. I just gave up my main source of income for this quest. Better be worth it.",
+		"next": "01",
+		"emotion": "talking",
+	},
+
+	"fight_0": {
+		"name": "Sweat",
+		"text": "There was no reason to fight.",
+		"next": "fight_1",
+		"emotion": "angry",
+		"condition": "killed_tree",
+		"condition_failed": "01"
+	},
+	
+	"fight_1": {
+		"name": "Sour",
+		"text": "Uh. We had every reason to fight. That big oak was blocking our path. The lumberer just did his job and removed the road block.",
+		"next": "fight_2",
+		"emotion": "talking",
+	},
+	
+		"fight_2": {
+		"name": "Sweat",
+		"text": "We can't just endanger the quest like that. Especially when we have a safer alternative.",
+		"next": "fight_3",
+		"emotion": "talking",
+	},
+	
+		"fight_3": {
+		"name": "Sour",
+		"text": "So what, you want the lumberer to give up his axe. What would he be without it.",
+		"next": "fight_4",
+		"emotion": "talking",
+	},
+	
+		"fight_4": {
+		"name": "Sweat",
+		"text": "The mortal would have been a whole lot smarter if he gave up his axe.",
+		"next": "fight_5",
+		"emotion": "talking",
+	},
+	
+		"fight_5": {
+		"name": "Lumberjack",
+		"text": "Can you two stop arguing for like five minutes. Your starting to sound like a pair of hyenas.",
+		"next": "fight_6",
+		"emotion": "talking",
+	},
+	
+		"fight_6": {
+		"name": "Sweat",
+		"text": "Stay out of this mortal.",
+		"next": "fight_7",
+		"emotion": "talking",
+	},
+	
+		"fight_7": {
+		"name": "Sour",
+		"text": "You aren't here to give us your opinion, your here to carry the relic. So less backhanded chit chat and more marching.",
+		"next": "fight_8",
+		"emotion": "talking",
+	},
+	
+		"fight_8": {
+		"name": "Lumberjack",
+		"text": "What did I ever do to deserve this.",
+		"next": "01",
+		"emotion": "talking",
+	},
+
+	"01": {
+		"name": "Narrator",
+		"text": "Leaving the forest behind, you walk along the trail in silence until you come to another fork in the road. One trail leads to the left another to the right.",
+		"next": "last_right_0",
+	},
+
+	"last_right_0": {
+		"name": "Lumberjack",
+		"text": "Oh great.",
+		"next": "last_right_1",
+		"emotion": "talking",
+		"condition": "tree_cut_1",
+		"condition_failed": "last_left_0"
+	},
+	
+	"last_right_1": {
+		"name": "Sour",
+		"text": "Left.",
+		"next": "last_right_2",
+		"emotion": "talking",
+	},
+	
+		"last_right_2": {
+		"name": "Sweat",
+		"text": "What.",
+		"next": "last_right_3",
+		"emotion": "talking",
+	},
+	
+	"last_right_3": {
+		"name": "Sour",
+		"text": "Left. We went right last time and we ended up being blocked by a fallen tree. So, this time we go left.",
+		"next": "last_right_4",
+		"emotion": "talking",
+	},
+	
+		"last_right_4": {
+		"name": "Sweat",
+		"text": "No. We go right again. Sure we got blocked by the tree but how was I supposed to know that it had fallen onto the trail. I know which way to go and that way is right.",
+		"next": "last_right_5",
+		"emotion": "talking",
+	},
+	
+	"last_right_5": {
+		"name": "Sour",
+		"text": "Left.",
+		"next": "last_right_6",
+		"emotion": "talking",
+	},
+	
+	"last_right_6": {
+		"name": "Sweat",
+		"text": "No right.",
+		"next": "last_right_7",
+		"emotion": "talking",
+	},
+	
+	"last_right_7": {
+		"name": "Sour",
+		"text": "Left.",
+		"next": "last_right_8",
+		"emotion": "talking",
+	},
+	
+	"last_right_8": {
+		"name": "Sweat",
+		"text": "Argh. Forget it. Mortal you decide.",
+		"next": "last_right_9",
+		"emotion": "talking",
+	},
+	
+	"last_right_9": {
+		"name": "Sour",
+		"text": "What. The lumberer is just going to decide with you again like they did with the last fork in the road and the talking tree.",
+		"next": "last_right_11",
+		"emotion": "talking",
+		"condition": "dropped_axe",
+		"condition_failed": "last_right_10"
+	},
+	
+	"last_right_10": {
+		"name": "Sour",
+		"text": "What. The lumberer is just going to decide with you again like they did with the last fork in the road.",
+		"next": "last_right_11",
+		"emotion": "talking",
+	},
+	
+	"last_right_11": {
+		"name": "Sweat",
+		"text": "To bad. I say right you say left, the mortals vote will break the tie.",
+		"next": "last_right_12",
+		"emotion": "talking",
+	},
+	
+	"last_right_12": {
+		"name": "Sour",
+		"text": "Alright just don't be swayed to pick right just because it worked out fine last time. Remember how tired you were after chopping that tree and Sweat made you keep walking.",
+		"next": "end",
+		"emotion": "talking",
+	},
+	
+		"last_left_0": {
+		"name": "Sweat",
+		"text": "Ok. So we're definitely going right this time.",
+		"next": "last_left_1",
+		"emotion": "talking",
+	},
+	
+		"last_left_1": {
+		"name": "Sour",
+		"text": "What why. I say we go left again.",
+		"next": "last_left_2",
+		"emotion": "talking",
+	},
+	
+		"last_left_2": {
+		"name": "Sweat",
+		"text": "Last time we went left we got lost. This time we're going to take the right path.",
+		"next": "last_left_3",
+		"emotion": "talking",
+	},
+	
+		"last_left_3": {
+		"name": "Sour",
+		"text": "No way. We were never lost we just took a detour. I don't see any reason why we don't just go left again. Lumberer you decide.",
+		"next": "last_left_4",
+		"emotion": "talking",
+	},
+	
+	"last_left_4": {
+		"name": "Sweat",
+		"text": "Why ask the mortal. Just so they can agree with you again like how they agreed to go left last time and fight the forest guardian.",
+		"next": "last_left_6",
+		"emotion": "talking",
+		"condition": "killed_tree",
+		"condition_failed": "last_left_5"
+	},
+	
+		"last_left_5": {
+		"name": "Sweat",
+		"text": "Why ask the mortal. Just so they can agree with you again like how they agreed to go left last time.",
+		"next": "last_left_6",
+		"emotion": "talking",
+	},
+	
+		"last_left_6": {
+		"name": "Sour",
+		"text": "To bad, let the lumberer decide.",
+		"next": "last_left_7",
+		"emotion": "talking",
+	},
+	
+		"last_left_7": {
+		"name": "Sweat",
+		"text": "Please mortal I beg you don't be stupid.",
+		"next": "end",
+		"emotion": "talking",
+	},
+	
+	"end": {
+		"trigger": "end"
+	}
+}

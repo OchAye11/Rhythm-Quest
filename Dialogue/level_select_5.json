@@ -1,0 +1,480 @@
+{
+	"00": {
+		"name": "Sour",
+		"text": "Good ridance. Lord Pasta will be thrilled to know we retired his oldest enemy.",
+		"next": "01",
+		"emotion": "happy",
+		"condition": "lord_killed",
+		"condition_failed": "riddle_0"
+	},
+	
+	"01": {
+		"name": "Sour",
+		"text": "I don't see what you were so worried about Sour. We lost the game as I said we would, but we beat lord Burger as I said we would.",
+		"next": "02",
+		"emotion": "talking",
+		"condition": "lost_riddle_5",
+		"condition_failed": "fought_0"
+	},
+	
+	"02": {
+		"name": "Sweat",
+		"text": "I guess you were right. And I don't like saying that.",
+		"next": "03",
+		"emotion": "talking",
+	},
+	
+	"03": {
+		"name": "Sour",
+		"text": "And you lumberer why did you side with Sweat. After all you've sided with me every other time.",
+		"next": "11",
+		"emotion": "talking",
+		"condition": {
+			"killed_tree": "1",
+			"been_lost_1": "2",
+			"been_lost_2": "3",
+			},
+		"condition_failed": "04"
+	},
+	
+	"04": {
+		"name": "Sour",
+		"text": "And you lumberer why did you side with Sweat. I know you've never fought anyone before but after getting lost twice together you should know that we can take on anything.",
+		"next": "11",
+		"emotion": "talking",
+		"condition": {
+			"been_lost_1": "2",
+			"been_lost_2": "3",
+			},
+		"condition_failed": "05"
+	},
+	
+		"05": {
+		"name": "Sour",
+		"text": "And you lumberer why did you side with Sweat. After we already fought the tree and got lost together you should have known that we are unstoppable.",
+		"next": "11",
+		"emotion": "talking",
+		"condition": {
+			"killed_tree": "1",
+			"been_lost_2": "2",
+			},
+		"condition_failed": "06"
+	},
+	
+		"06": {
+		"name": "Sour",
+		"text": "And you lumberer why did you side with Sweat. After we got lost and fought the tree together you should have known that we are unstoppable.",
+		"next": "11",
+		"emotion": "talking",
+		"condition": {
+			"killed_tree": "1",
+			"been_lost_1": "2",
+			},
+		"condition_failed": "07"
+	},
+	
+	"07": {
+		"name": "Sour",
+		"text": "And you lumberer why did you side with Sweat. After we already fought the tree you should have had more confidence in yourself and your fighting abilities.",
+		"next": "11",
+		"emotion": "talking",
+		"condition": "killed_tree",
+		"condition_failed": "08"
+	},
+	
+	"08": {
+		"name": "Sour",
+		"text": "And you lumberer, you sided with Sweat. But after getting lost together you should know that we can take on any challenge that get's thrown at us.",
+		"next": "11",
+		"emotion": "talking",
+		"condition": "been_lost_1",
+		"condition_failed": "09"
+	},
+	
+	"09": {
+		"name": "Sour",
+		"text": "And you lumberer, you sided with Sweat. But after getting lost together you should know that we can take on any challenge that get's thrown at us.",
+		"next": "11",
+		"emotion": "talking",
+		"condition": "been_lost_2",
+		"condition_failed": "10"
+	},
+	
+		"10": {
+		"name": "Sour",
+		"text": "And you lumberer, you sided with Sweat yet again. Why?",
+		"next": "11",
+		"emotion": "talking",
+	},
+	
+		"11": {
+		"name": "Lumberjack",
+		"text": "I like playing games.",
+		"next": "12",
+		"emotion": "talking",
+	},
+	
+		"12": {
+		"name": "Sour",
+		"text": "Fair enough, so do I. But I love fighting more.",
+		"next": "trail_0",
+		"emotion": "talking",
+	},
+
+	"fought_0": {
+		"name": "Sweat",
+		"text": "I can't believe you and the mortal endangered our lives like that.",
+		"next": "fought_1",
+		"emotion": "angry",
+	},
+	
+	"fought_1": {
+		"name": "Sour",
+		"text": "What are you talking about?",
+		"next": "fought_2",
+		"emotion": "talking",
+	},
+	
+	"fought_2": {
+		"name": "Sweat",
+		"text": "We had a chance to resolve this peacefully and without harm coming to any of us. We should have taken it.",
+		"next": "fought_3",
+		"emotion": "talking",
+	},
+	
+		"fought_3": {
+		"name": "Sour",
+		"text": "I'm sorry we didn't play along with your stupid game that we would have lost anyway.",
+		"next": "fought_4",
+		"emotion": "talking",
+	},
+
+	"fought_4": {
+		"name": "Sweat",
+		"text": "You don't know that.",
+		"next": "fought_5",
+		"emotion": "talking",
+	},
+
+	"fought_5": {
+		"name": "Sour",
+		"text": "Of course we were going to lose. The odds were stacked against us so we would have fought anyway. Me and the lumberer just saved us the embarrassment of losing.",
+		"next": "choices_0",
+		"emotion": "talking",
+	},
+	
+		"choices_0": {
+		"name": "Sweat",
+		"text": "I expected this sort of attidude from Sour but not you mortal. Especially after you were willing to give up your axe to avoid fighting and follow my directions on both forks in the trail.",
+		"next": "fought_7",
+		"emotion": "talking",
+		"condition": {
+			"dropped_axe": "1",
+			"tree_cut_1": "2",
+			"choice_4_2": "3",
+			},
+		"condition_failed": "choices_1"
+	},
+	
+		"choices_1": {
+		"name": "Sweat",
+		"text": "You followed my advice for both forks in the trail mortal. Why not follow it again now?",
+		"next": "fought_7",
+		"emotion": "talking",
+		"condition": {
+			"tree_cut_1": "2",
+			"choice_4_2": "3",
+			},
+		"condition_failed": "choices_2"
+	},
+	
+		"choices_2": {
+		"name": "Sweat",
+		"text": "You followed my advice on dropping your axe and for the fork in the trail mortal. Why not follow it again now?",
+		"next": "fought_7",
+		"emotion": "talking",
+		"condition": {
+			"dropped_axe": "1",
+			"choice_4_2": "2",
+			},
+		"condition_failed": "choices_3"
+	},
+	
+		"choices_3": {
+		"name": "Sweat",
+		"text": "You followed my advice for the fork on the trail and dropping your axe mortal. Why not follow it again now?",
+		"next": "fought_7",
+		"emotion": "talking",
+		"condition": {
+			"dropped_axe": "1",
+			"tree_cut_1": "2",
+			},
+		"condition_failed": "choices_4"
+	},
+	
+	"choices_4": {
+		"name": "Sweat",
+		"text": "I expected this sort of attidude from Sour but not you mortal. Especially after you were willing to give up your axe to avoid fighting.",
+		"next": "fought_7",
+		"emotion": "talking",
+		"condition": "dropped_axe",
+		"condition_failed": "choices_5"
+	},
+	
+	"choices_5": {
+		"name": "Sweat",
+		"text": "You followed my advice for the fork on the trail mortal. Why not follow it again now?",
+		"next": "fought_7",
+		"emotion": "talking",
+		"condition": "tree_cut_1",
+		"condition_failed": "choices_6"
+	},
+	
+	"choices_6": {
+		"name": "Sweat",
+		"text": "You followed my advice for the fork on the trail mortal. Why not follow it again now?",
+		"next": "fought_7",
+		"emotion": "talking",
+		"condition": "choice_4_2",
+		"condition_failed": "fought_6"
+	},
+	
+	"fought_6": {
+		"name": "Sweat",
+		"text": "Why is it the mortal never listens to me?",
+		"next": "fought_7",
+		"emotion": "angry",
+	},
+	
+	"fought_7": {
+		"name": "Sour",
+		"text": "Don't bother listening to Sweaty lumberer. You made the right choice.",
+		"next": "trail_0",
+		"emotion": "talking",
+	},
+
+	"riddle_0": {
+		"name": "Sweat",
+		"text": "Who hoo. I told you it was a great idea. Brain always beats brawn.",
+		"next": "riddle_1",
+		"emotion": "happy",
+		"condition": {
+			"riddle_5": "1",
+			"won_riddle_5": "2",
+			},
+		"condition_failed": "trail_0"
+	},
+	
+	"riddle_1": {
+		"name": "Sour",
+		"text": "We got lucky. I still think we should have fought lord Burger. It was three against one and beating him would have been a great triumph for lord Pasta.",
+		"next": "riddle_2",
+		"emotion": "talking",
+	},
+	
+		"riddle_2": {
+		"name": "Sweat",
+		"text": "Delivering the relic will be a great triumph for lord Pasta, or have you forgotten that.",
+		"next": "sour_choices_0",
+		"emotion": "talking",
+	},
+	
+	"sour_choices_0": {
+		"name": "Sour",
+		"text": "I know. I just don't understand why the lumberer chose your side after they followed my directions twice and fought the tree.",
+		"next": "riddle_4",
+		"emotion": "talking",
+		"condition": {
+			"killed_tree": "1",
+			"been_lost_1": "2",
+			"been_lost_2": "3",
+			},
+		"condition_failed": "sour_choices_1"
+	},
+	
+	"sour_choices_1": {
+		"name": "Sour",
+		"text": "I know. I just don't understand why the lumberer chose your side after they followed my directions twice",
+		"next": "riddle_4",
+		"emotion": "talking",
+		"condition": {
+			"been_lost_1": "2",
+			"been_lost_2": "3",
+			},
+		"condition_failed": "sour_choices_2"
+	},
+	
+		"sour_choices_2": {
+		"name": "Sour",
+		"text": "I know. I just don't understand why the lumberer chose your side after they fought the tree and went left that one time.",
+		"next": "riddle_4",
+		"emotion": "talking",
+		"condition": {
+			"killed_tree": "1",
+			"been_lost_2": "2",
+			},
+		"condition_failed": "sour_choices_3"
+	},
+	
+		"sour_choices_3": {
+		"name": "Sour",
+		"text": "I know. I just don't understand why the lumberer chose your side after they went left that one time and fought the tree.",
+		"next": "riddle_4",
+		"emotion": "talking",
+		"condition": {
+			"killed_tree": "1",
+			"been_lost_1": "2",
+			},
+		"condition_failed": "sour_choices_4"
+	},
+	
+	"sour_choices_4": {
+		"name": "Sour",
+		"text": "I know. I just don't understand why the lumberer chose your side after they fought the tree.",
+		"next": "riddle_4",
+		"emotion": "talking",
+		"condition": "killed_tree",
+		"condition_failed": "sour_choices_5"
+	},
+	
+	"sour_choices_5": {
+		"name": "Sour",
+		"text": "I know. I just don't understand why the lumberer chose your side after they went left that one time. I thought we bonded.",
+		"next": "riddle_4",
+		"emotion": "talking",
+		"condition": "been_lost_1",
+		"condition_failed": "sour_choices_6"
+	},
+	
+	"sour_choices_6": {
+		"name": "Sour",
+		"text": "I know. I just don't understand why the lumberer chose your side after they went left that one time. I thought we bonded over the fact my way was better.",
+		"next": "riddle_4",
+		"emotion": "talking",
+		"condition": "been_lost_2",
+		"condition_failed": "riddle_3"
+	},
+	
+		"riddle_3": {
+		"name": "Sour",
+		"text": "I know. I just hate how the lumberer only does what you tell him to do.",
+		"next": "riddle_4",
+		"emotion": "angry",
+	},
+	
+		"riddle_4": {
+		"name": "Sweat",
+		"text": "You don't have to be upset. The mortal isn't playing favourites. But if they were I would be the favourite.",
+		"next": "riddle_5",
+		"emotion": "talking",
+	},
+	
+		"riddle_5": {
+		"name": "Sour",
+		"text": "This is why I'm your only friend. Everyone else thinks your a bampot.",
+		"next": "trail_0",
+		"emotion": "talking",
+	},
+
+	"trail_0": {
+		"name": "Narrator",
+		"text": "The group finally enters the mountain pass and are now within the domain of lord Pasta. After walking for miles the group comes to yet another fork in the trail.",
+		"next": "trail_1",
+		"emotion": "talking",
+	},
+	
+	"trail_1": {
+		"name": "Lumberjack",
+		"text": "Oh great. Another split. can you guys try not to argue this time and just pick a direction this time.",
+		"next": "trail_2",
+		"emotion": "talking",
+	},
+	
+	"trail_2": {
+		"name": "Sour",
+		"text": "Of course we can, we're not children.",
+		"next": "trail_3",
+		"emotion": "talking",
+	},
+	
+		"trail_3": {
+		"name": "Sweat",
+		"text": "What Sour said. And don't worry because I think we should go left this time.",
+		"next": "trail_4",
+		"emotion": "talking",
+	},
+	
+		"trail_4": {
+		"name": "Sour",
+		"text": "What no. We should go right.",
+		"next": "trail_5",
+		"emotion": "talking",
+	},
+	
+		"trail_5": {
+		"name": "Lumberjack",
+		"text": "Seriously.",
+		"next": "trail_6",
+		"emotion": "talking",
+	},
+	
+		"trail_6": {
+		"name": "Sweat",
+		"text": "Left.",
+		"next": "trail_7",
+		"emotion": "talking",
+	},
+	
+		"trail_7": {
+		"name": "Sour",
+		"text": "Right.",
+		"next": "trail_8",
+		"emotion": "talking",
+	},
+	
+		"trail_8": {
+		"name": "Sweat",
+		"text": "Left.",
+		"next": "trail_9",
+		"emotion": "talking",
+	},
+	
+		"trail_9": {
+		"name": "Sour",
+		"text": "Right.",
+		"next": "trail_10",
+		"emotion": "talking",
+	},
+	
+		"trail_10": {
+		"name": "Sweat",
+		"text": "Mortal.",
+		"next": "trail_11",
+		"emotion": "talking",
+	},
+	
+		"trail_11": {
+		"name": "Sour",
+		"text": "Lumberer.",
+		"next": "trail_12",
+		"emotion": "talking",
+	},
+	
+		"trail_12": {
+		"name": "Sweat and Sour",
+		"text": "You decide.",
+		"next": "trail_13",
+		"emotion": "talking",
+	},
+	
+		"trail_13": {
+		"name": "Lumberjack",
+		"text": "Actual children.",
+		"next": "end",
+		"emotion": "talking",
+	},
+	
+	"end": {
+		"trigger": "end"
+	}
+}

@@ -1,0 +1,63 @@
+{
+	"00": {
+		"name": "Lumberjack",
+		"text": "Phew. All done. Time to have a rest.",
+		"next": "chopped_tree_0",
+		"emotion": "talking",
+		"condition": "tree_cut_2",
+		"condition_failed": "moved_tree_0"
+	},
+	
+	"chopped_tree_0": {
+		"name": "Sweat",
+		"text": "No time to rest now mortal we're almost there.",
+		"next": "chopped_tree_1",
+		"emotion": "talking",
+	},
+	
+	"chopped_tree_1": {
+		"name": "Lumberjack",
+		"text": "You've got to be joking.",
+		"next": "chopped_tree_2",
+		"emotion": "talking",
+	},
+	
+	"chopped_tree_2": {
+		"name": "Sweat",
+		"text": "No I'm not mortal. On your feet, let's get going.",
+		"next": "end",
+		"emotion": "talking",
+	},
+	
+	"moved_tree_0": {
+		"name": "Lumberjack",
+		"text": "Argh. My whole body feels like it's going to burst.",
+		"next": "moved_tree_1",
+		"emotion": "talking",
+	},
+	
+	"moved_tree_1": {
+		"name": "Sweat",
+		"text": "I'm sure that will fade. Eventually. Anyway we're almost there.",
+		"next": "moved_tree_2",
+		"emotion": "talking",
+	},
+	
+	"moved_tree_2": {
+		"name": "Lumberjack",
+		"text": "Just give me five minutes.",
+		"next": "moved_tree_3",
+		"emotion": "talking",
+	},
+	
+	"moved_tree_3": {
+		"name": "Sweat",
+		"text": "Nope. On your feet mortal. Let's get going",
+		"next": "end",
+		"emotion": "talking",
+	},
+	
+	"end": {
+		"trigger": "end"
+	}
+}

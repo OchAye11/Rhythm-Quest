@@ -1,0 +1,87 @@
+{
+	"00": {
+		"name": "Lumberjack",
+		"text": "Okay. So which way is north.",
+		"next": "01"
+	},
+
+	"01": {
+		"name": "Sour",
+		"text": "Well north is whatever way your facing.",
+		"next": "02",
+		"emotion": "talking",
+	},
+
+	"02": {
+		"name": "Sweat",
+		"text": "No... that's... just wrong. Let's just follow the trail out of the forest.",
+		"next": "03",
+		"emotion": "confused",
+	},
+
+	"03": {
+		"name": "Narrator",
+		"text": "You follow the trail for what seems like an age before coming up to a split in the trail. One trail bends to the left the other towards the right.",
+		"next": "04",
+	},
+
+	"04": {
+		"name": "Lumberjack",
+		"text": "What way do we go now?",
+		"next": "05",
+		"emotion": "talking",
+	},
+	
+	"05": {
+		"name": "Sour",
+		"text": "It's obvious. We go left.",
+		"next": "06",
+		"emotion": "talking",
+	},
+	
+	"06": {
+		"name": "Sweat",
+		"text": "No we have to go right.",
+		"next": "07",
+		"emotion": "talking",
+	},
+	
+	"07": {
+		"name": "Sour",
+		"text": "No! Left.",
+		"next": "08",
+		"emotion": "angry",
+	},
+	
+		"08": {
+		"name": "Sweat",
+		"text": "What are you stupid. Everyone knows that going right is always the right way to go.",
+		"next": "09",
+		"emotion": "angry",
+	},
+	
+		"09": {
+		"name": "Sour",
+		"text": "Nun uh. Left is the way to go cause left is the best.",
+		"next": "10",
+		"emotion": "talking",
+	},
+	
+		"10": {
+		"name": "Sweat",
+		"text": "This isn't getting us anywhere. Mortal you decide, should we go left or right. I know your smart enough to realise that we need to go right.",
+		"next": "11",
+		"emotion": "talking",
+	},
+	
+		"11": {
+		"name": "Sour",
+		"text": "Don't listen to that green orb, let's go left.",
+		"next": "end",
+		"emotion": "talking",
+	},
+	
+	"end": {
+		"trigger": "end"
+	}
+}

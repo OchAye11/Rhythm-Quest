@@ -1,0 +1,35 @@
+{
+	"00": {
+		"name": "Narrator",
+		"text": "In an ordinary forest, on an ordinary day, an ordinary lumberjack was going about his day.",
+		"next": "01"
+	},
+
+	"01": {
+		"name": "Lumberjack",
+		"text": "Wow! What a great day. The sun is out, there's not a cloud in the sky and a cool breeze is on the wind. I'm sure nothing can ruin this perfect day.",
+		"next": "02"
+	},
+
+	"02": {
+		"name": "Narrator",
+		"text": "An ominous wind blows down from the north.",
+		"next": "03",
+	},
+
+	"03": {
+		"name": "Lumberjack",
+		"text": "I'm sure that wind was nothing. It's time to get back to work. The faster I get this tree cut down the faster I can go to the tavern and get a frosty pint to cool me off.",
+		"next": "04",
+	},
+
+	"04": {
+		"name": "Narrator",
+		"text": "Use the 'wasd' or arrow keys in time with the music to chop the tree down.",
+		"next": "end",
+	},
+
+	"end": {
+		"trigger": "end"
+	}
+}

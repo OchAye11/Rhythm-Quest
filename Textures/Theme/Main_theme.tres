@@ -1,0 +1,37 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://dd7vnve77hcbm"]
+
+[ext_resource type="FontFile" uid="uid://be3gd3yciljee" path="res://Textures/KGPerfectPenmanship.ttf" id="1_n1t8r"]
+[ext_resource type="Texture2D" uid="uid://cfcnfm01dvt50" path="res://Textures/Transparent.png" id="2_j4uae"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_n1t8r"]
+color = Color(0.286275, 0.262745, 0.0705882, 1)
+grow_begin = 0.0
+grow_end = 0.0
+thickness = 20
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_j4uae"]
+color = Color(0.286275, 0.262745, 0.0705882, 1)
+grow_begin = 0.0
+grow_end = 0.0
+thickness = 20
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_ek0jw"]
+color = Color(1, 1, 1, 1)
+grow_begin = 0.0
+grow_end = 0.0
+thickness = 20
+
+[resource]
+Button/fonts/font = ExtResource("1_n1t8r")
+HSlider/icons/grabber = ExtResource("2_j4uae")
+HSlider/icons/grabber_disabled = ExtResource("2_j4uae")
+HSlider/icons/grabber_highlight = ExtResource("2_j4uae")
+HSlider/styles/grabber_area = SubResource("StyleBoxLine_n1t8r")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxLine_j4uae")
+HSlider/styles/slider = SubResource("StyleBoxLine_ek0jw")
+Label/fonts/font = ExtResource("1_n1t8r")
+RichTextLabel/fonts/bold_font = ExtResource("1_n1t8r")
+RichTextLabel/fonts/bold_italics_font = ExtResource("1_n1t8r")
+RichTextLabel/fonts/italics_font = ExtResource("1_n1t8r")
+RichTextLabel/fonts/mono_font = ExtResource("1_n1t8r")
+RichTextLabel/fonts/normal_font = ExtResource("1_n1t8r")
